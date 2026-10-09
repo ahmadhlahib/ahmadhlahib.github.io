@@ -3,9 +3,9 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta name="description" content="Android and Windows developer in Baabda, Lebanon, specialising in payment terminals, card payments and device integrations. Available for freelance mobile and desktop app projects.">
+<meta name="description" content="Ahmad El Lahib, Senior Android Developer in Baabda, Lebanon. I build Android apps, Windows apps and websites, specialising in payment terminals, card payments and device integrations. Available for freelance projects.">
 <meta property="og:title" content="Ahmad El Lahib — Android & Windows developer">
-<meta property="og:description" content="I build the software that takes the payment — and the apps around it. Available for freelance projects.">
+<meta property="og:description" content="I build the software that takes the payment — and the apps and websites around it. Available for freelance projects.">
 <meta property="og:type" content="website">
 <meta property="og:image" content="https://ahmadhlahib.github.io/assets/ahmad-el-lahib-square.jpg">
 <meta property="og:url" content="https://ahmadhlahib.github.io/">
@@ -146,7 +146,7 @@ section { padding-block: clamp(56px, 8vw, 96px); border-top: 1px solid var(--rul
 }
 .portrait strong { display: block; font-family: var(--display); font-size: 64px; line-height: 1; color: var(--todo); margin-bottom: 10px; }
 .about-copy { display: grid; gap: 18px; max-width: 64ch; }
-.facts { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; margin-top: 8px; }
+.facts { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 12px; margin-top: 8px; }
 .fact { border-top: 2px solid var(--ink); padding-top: 12px; }
 .fact b { display: block; font-family: var(--display); font-size: 26px; font-weight: 700; line-height: 1.1; }
 .fact span { font-size: 14px; color: var(--muted); }
@@ -179,6 +179,20 @@ section { padding-block: clamp(56px, 8vw, 96px); border-top: 1px solid var(--rul
 }
 .frame .c { color: var(--muted); }
 .frame .g { color: var(--ok); font-weight: 600; }
+
+/* experience & credentials */
+.timeline { display: grid; gap: 0; border-left: 2px solid var(--rule); margin-left: 6px; }
+.tl-item { position: relative; display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 6px 24px; padding: 0 0 28px 26px; }
+.tl-item::before { content: ""; position: absolute; left: -8px; top: 6px; width: 14px; height: 14px; border-radius: 50%; background: var(--paper); border: 3px solid var(--accent); }
+.tl-item h3 { font-size: 20px; font-weight: 700; }
+.tl-org { color: var(--muted); font-size: 15px; }
+.tl-when { font-family: var(--mono); font-size: 13px; color: var(--muted); white-space: nowrap; font-variant-numeric: tabular-nums; }
+.tl-item p { grid-column: 1 / -1; color: var(--muted); font-size: 15.5px; max-width: 70ch; }
+.creds { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; margin-top: 40px; }
+.cred { background: var(--sheet); border: 1px solid var(--rule); border-radius: 14px; padding: 18px 20px; display: grid; gap: 4px; align-content: start; min-width: 0; }
+.cred b { font-size: 16px; line-height: 1.35; }
+.cred span { color: var(--muted); font-size: 14px; }
+.cred .yr { font-family: var(--mono); font-size: 12.5px; color: var(--accent); }
 
 /* process */
 .steps { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 18px; counter-reset: step; }
@@ -218,11 +232,12 @@ footer { display: flex; justify-content: space-between; gap: 16px; flex-wrap: wr
 /* ---------- responsive ---------- */
 @media (max-width: 900px) {
   .hero, .sec-head, .about, .case, .contact { grid-template-columns: minmax(0, 1fr); }
-  .services { grid-template-columns: minmax(0, 1fr); }
+  .services, .creds { grid-template-columns: minmax(0, 1fr); }
+  .tl-item { grid-template-columns: minmax(0, 1fr); }
   .svc { border-right: 0; }
   .svc:nth-last-child(-n+3) { border-bottom: 1px solid var(--rule); }
   .svc:last-child { border-bottom: 0; }
-  .steps, .stack { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .steps, .stack, .facts { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .portrait, .portrait-img { max-width: 320px; }
 }
 @media (max-width: 520px) {
@@ -241,19 +256,22 @@ footer { display: flex; justify-content: space-between; gap: 16px; flex-wrap: wr
       <a href="#about">About</a>
       <a href="#services">Services</a>
       <a href="#work">Work</a>
+      <a href="#experience">Experience</a>
       <a href="#process">How I work</a>
       <a href="#contact">Contact</a>
+      <a href="cv.pdf">CV</a>
     </div>
   </nav>
 
   <header class="hero" id="top">
     <div class="hero-copy">
-      <span class="eyebrow">Android Developer at areeba · Payment terminals, EMV &amp; POS apps · Freelance Android &amp; Windows apps</span>
-      <h1>I build the software that <em>takes the payment</em> — and the apps around it.</h1>
-      <p class="lede">I'm an Android developer who works on payment terminals every day: card readers, cash-register links and vending machines. I bring the same care to the mobile and Windows apps I build for clients — reliable, tested on real hardware, and pleasant to use.</p>
+      <span class="eyebrow">Senior Android Developer at areeba · Payment terminals, EMV &amp; POS apps · Freelance apps &amp; websites</span>
+      <h1>I build the software that <em>takes the payment</em> — and the apps and websites around it.</h1>
+      <p class="lede">I'm a senior Android developer who works on payment terminals every day: card readers, cash-register links and vending machines. I bring the same care to the mobile apps, Windows apps and websites I build for clients — reliable, tested on real hardware, and pleasant to use.</p>
       <div class="cta-row">
         <a class="btn btn-primary" href="#contact">Start a project</a>
         <a class="btn btn-ghost" href="#work">See my work</a>
+        <a class="btn btn-ghost" href="cv.pdf">Download CV</a>
       </div>
       <div class="status"><span class="dot" aria-hidden="true"></span>Available for freelance projects · Baabda, Lebanon</div>
     </div>
@@ -261,7 +279,7 @@ footer { display: flex; justify-content: space-between; gap: 16px; flex-wrap: wr
     <div class="slot" aria-label="A printed receipt listing the services offered">
       <div class="receipt">
         <div class="r-center r-head">AHMAD EL LAHIB · DEV</div>
-        <div class="r-center r-small">Android · Windows · Payments</div>
+        <div class="r-center r-small">Android · Windows · Web · Payments</div>
         <hr class="r-sep">
         <div class="r-row"><span>TID</span><span>FREELANCE-01</span></div>
         <div class="r-row"><span>DATE</span><span id="r-date">—</span></div>
@@ -269,6 +287,7 @@ footer { display: flex; justify-content: space-between; gap: 16px; flex-wrap: wr
         <hr class="r-sep">
         <div class="r-line"><span>ANDROID APP</span><span class="fill"></span><span>✓</span></div>
         <div class="r-line"><span>WINDOWS APP</span><span class="fill"></span><span>✓</span></div>
+        <div class="r-line"><span>WEBSITE</span><span class="fill"></span><span>✓</span></div>
         <div class="r-line"><span>POS / PAYMENTS</span><span class="fill"></span><span>✓</span></div>
         <div class="r-line"><span>MDB · RS232 · USB</span><span class="fill"></span><span>✓</span></div>
         <div class="r-line"><span>TEST TOOLS</span><span class="fill"></span><span>✓</span></div>
@@ -286,13 +305,15 @@ footer { display: flex; justify-content: space-between; gap: 16px; flex-wrap: wr
       <div class="about-copy">
         <span class="eyebrow">About me</span>
         <h2 id="about-h" style="font-size:clamp(30px,4vw,46px);font-weight:700">Payments taught me to build things that can't fail quietly.</h2>
-        <p>At <strong>areeba</strong> I develop the Android app that runs on our payment terminals — Nexgo and Kozen devices such as the UN20, N62 and N92. A customer taps a card, and my code reads it, talks to the bank, prints the receipt and tells the cash register or vending machine what happened.</p>
+        <p>As a Senior Android Developer at <strong>areeba</strong>, I develop the Android app that runs on our payment terminals — Nexgo and Kozen devices such as the UN20, N62 and N92. A customer taps a card, and my code reads it, talks to the bank, prints the receipt and tells the cash register or vending machine what happened.</p>
         <p>That work means EMV card flows, PIN entry, reversals and currency conversion, plus integrations with cash registers over serial and Wi-Fi and with vending machines over MDB. When the hardware isn't on my desk, I build the tools to test without it.</p>
-        <p>As a freelancer I take that discipline to mobile and Windows apps for businesses: clear requirements, small working releases, and code that's tested before it ships.</p>
+        <p>Before areeba I spent almost seven years at BMB Group, building a B2B merchandising app from scratch with offline sync and receipt printing. I started in 2014 at Code Fish, building HR systems in C# and .NET for clients such as GlobeMed.</p>
+        <p>As a freelancer I take that discipline to mobile apps, Windows apps and websites for businesses: clear requirements, small working releases, and code that's tested before it ships.</p>
         <div class="facts">
           <div class="fact"><b><span id="years">12+</span></b><span>years building apps, since 2014</span></div>
           <div class="fact"><b>5+</b><span>terminal models shipped to</span></div>
-          <div class="fact"><b>3</b><span>languages in my UIs: EN · AR · KU</span></div>
+          <div class="fact"><b>40%</b><span>fewer crashes after my refactor</span></div>
+          <div class="fact"><b>Scrum</b><span>certified Master &amp; Product Owner</span></div>
         </div>
       </div>
     </div>
@@ -317,6 +338,12 @@ footer { display: flex; justify-content: space-between; gap: 16px; flex-wrap: wr
         <div class="tags"><span class="tag">C#</span><span class="tag">WPF</span><span class="tag">.NET</span></div>
       </article>
       <article class="svc">
+        <span class="code">web/</span>
+        <h3>Websites &amp; web apps</h3>
+        <p>Company sites, portfolios, landing pages and web dashboards: responsive on every screen, fast to load and easy to keep up to date, like this site.</p>
+        <div class="tags"><span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">JavaScript</span><span class="tag">ASP.NET</span></div>
+      </article>
+      <article class="svc">
         <span class="code">payments/</span>
         <h3>POS &amp; payment apps</h3>
         <p>Apps for Android payment terminals: card payments, receipts, settlement, and links to cash registers. I know the edge cases — declines, reversals, timeouts.</p>
@@ -325,14 +352,8 @@ footer { display: flex; justify-content: space-between; gap: 16px; flex-wrap: wr
       <article class="svc">
         <span class="code">hardware/</span>
         <h3>Device integrations</h3>
-        <p>Connecting software to machines: vending machines over MDB, printers, serial and USB devices, cash-register protocols.</p>
+        <p>Connecting software to machines: vending machines over MDB, printers, serial and USB devices, cash-register protocols. When the real device is far away, I build a simulator so your team can test from a laptop.</p>
         <div class="tags"><span class="tag">MDB</span><span class="tag">RS232</span><span class="tag">USB</span></div>
-      </article>
-      <article class="svc">
-        <span class="code">tools/</span>
-        <h3>Simulators &amp; test tools</h3>
-        <p>When the real device is expensive or far away, I build a simulator for it, so your team can test every scenario from a laptop.</p>
-        <div class="tags"><span class="tag">Simulation</span><span class="tag">Automation</span></div>
       </article>
       <article class="svc">
         <span class="code">fix/</span>
@@ -400,6 +421,71 @@ footer { display: flex; justify-content: space-between; gap: 16px; flex-wrap: wr
           </ul>
         </div>
       </article>
+      <article class="case">
+        <div class="case-meta">
+          <span class="eyebrow">Freelance · Android &amp; iOS · 2026</span>
+          <h3>Fly Beirut Taxi</h3>
+          <div class="tags"><span class="tag">Kotlin Multiplatform</span><span class="tag">Compose</span><span class="tag">Firebase</span></div>
+        </div>
+        <div class="case-body">
+          <p>A motorbike-taxi and small-parcel delivery app for a Beirut taxi office, built once in Kotlin Multiplatform for Android and iOS. Riders order on a map, drivers accept jobs, and the office manages everything from its own dashboard.</p>
+          <ul>
+            <li>Three roles in one app: rider, driver and office manager, in Arabic (right-to-left) and English.</li>
+            <li>Fares calculated on the server from the office's rules, so they can't be tampered with; cash or card payment.</li>
+            <li>Smart dispatch: only free drivers are notified, the first valid accept wins, and the manager can assign a driver or approve each job.</li>
+            <li>Live driver tracking, monthly financial reports and commission settlement, on Firebase (Auth, Firestore, Cloud Functions, push).</li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="case">
+        <div class="case-meta">
+          <span class="eyebrow">BMB Group · Android · 2017 – 2024</span>
+          <h3>B2B merchandising app</h3>
+          <div class="tags"><span class="tag">Android</span><span class="tag">MVVM</span><span class="tag">SQLite</span></div>
+        </div>
+        <div class="case-body">
+          <p>Designed and delivered a merchandising app for field teams from scratch to deployment, owning the whole lifecycle from architecture to customer delivery.</p>
+          <ul>
+            <li>Offline-first: data syncs reliably between online and offline with no data loss.</li>
+            <li>Payment, reporting and analytics SDKs, plus receipt and report printing across printer models.</li>
+            <li>Clean MVVM with Strategy, Chain of Responsibility and Repository patterns; mentored juniors and introduced unit tests, CI and peer reviews.</li>
+          </ul>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section id="experience" aria-labelledby="exp-h">
+    <div class="sec-head">
+      <div><span class="eyebrow">Experience</span><h2 id="exp-h" style="margin-top:12px">12 years of building software</h2></div>
+      <p>From backend systems in C# to the apps on payment terminals. <a href="cv.pdf">Download my full CV</a>.</p>
+    </div>
+    <div class="timeline">
+      <div class="tl-item">
+        <div><h3>Senior Android Developer</h3><div class="tl-org">areeba · Beirut</div></div>
+        <span class="tl-when">Jun 2024 – Present</span>
+        <p>Lead Android development of the POS app on Nexgo and Kozen payment terminals: card payments, DCC, surcharging, QR payments, settlement, cash-register and vending-machine integrations. Refactoring that cut crashes by 40%.</p>
+      </div>
+      <div class="tl-item">
+        <div><h3>Mid-Level Android Developer</h3><div class="tl-org">BMB Group (Move) · Beirut</div></div>
+        <span class="tl-when">Oct 2017 – May 2024</span>
+        <p>Built a B2B merchandising app from scratch: offline-first sync, SDK integrations and receipt printing. Mentored junior developers and introduced unit testing, CI and peer reviews.</p>
+      </div>
+      <div class="tl-item">
+        <div><h3>Junior Software Developer</h3><div class="tl-org">Code Fish · Beirut</div></div>
+        <span class="tl-when">Dec 2014 – Sep 2017</span>
+        <p>HR management systems for clients including GlobeMed, Jubaili Co. and iEngineering; backend systems in C# and .NET. Joined as a software developer intern in July 2014.</p>
+      </div>
+    </div>
+
+    <div class="creds">
+      <div class="cred"><span class="yr">2010 – 2014</span><b>B.S. in Computer Science</b><span>American University of Science &amp; Technology (AUST), Beirut</span></div>
+      <div class="cred"><span class="yr">2014</span><b>Scrum Master</b><span>Scrum Arabia</span></div>
+      <div class="cred"><span class="yr">2014</span><b>Scrum Product Owner</b><span>Scrum Arabia</span></div>
+      <div class="cred"><span class="yr">2014</span><b>Investigating DNS Abuse / Misuse for Law Enforcement</b><span>AUST Cyber Crime Center &amp; ICANN</span></div>
+      <div class="cred"><span class="yr">2013</span><b>CCNA Discovery: Networking for Home &amp; Small Businesses</b><span>Cisco Networking Academy</span></div>
+      <div class="cred"><span class="yr">Languages</span><b>Arabic · English · French</b><span>Native · Excellent · Very good</span></div>
     </div>
   </section>
 
@@ -422,10 +508,10 @@ footer { display: flex; justify-content: space-between; gap: 16px; flex-wrap: wr
       <p>Chosen for the job, not for the trend.</p>
     </div>
     <div class="stack">
-      <div><h3>Mobile</h3><ul><li>Kotlin</li><li>Jetpack Compose</li><li>Coroutines &amp; Flow</li><li>Hilt</li><li>Firebase</li></ul></div>
-      <div><h3>Desktop</h3><ul><li>C#</li><li>WPF</li><li>.NET</li><li>PowerShell</li></ul></div>
+      <div><h3>Mobile</h3><ul><li>Kotlin · Java</li><li>Jetpack Compose</li><li>Coroutines &amp; Flow</li><li>Hilt · Room · SQLite</li><li>MVVM · Clean Architecture</li><li>Firebase</li></ul></div>
+      <div><h3>Web &amp; desktop</h3><ul><li>HTML · CSS · JavaScript</li><li>ASP.NET · PHP</li><li>C# · .NET · WPF</li><li>REST APIs · SQL</li></ul></div>
       <div><h3>Payments &amp; devices</h3><ul><li>EMV card flows</li><li>Nexgo / Kozen SDKs</li><li>MDB vending</li><li>Serial · USB · ECR</li></ul></div>
-      <div><h3>Workflow</h3><ul><li>Git · Bitbucket · GitHub</li><li>Unit testing</li><li>Android Studio</li><li>Code review</li></ul></div>
+      <div><h3>Workflow</h3><ul><li>Git · Bitbucket · GitHub</li><li>CI/CD · Unit testing</li><li>Agile / Scrum</li><li>Code review &amp; mentoring</li></ul></div>
     </div>
   </section>
 
@@ -447,7 +533,7 @@ footer { display: flex; justify-content: space-between; gap: 16px; flex-wrap: wr
 
   <footer>
     <span>© <span id="year">2026</span> Ahmad El Lahib</span>
-    <span>Android · Windows · Payments — based in Baabda, Lebanon</span>
+    <span>Android · Windows · Web · Payments — based in Baabda, Lebanon</span>
   </footer>
 </div>
 

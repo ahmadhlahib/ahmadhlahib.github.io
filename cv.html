@@ -1,0 +1,258 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ahmad El Lahib · CV</title>
+<meta name="description" content="CV of Ahmad El Lahib, Senior Android Developer specialising in payment terminals and POS apps, Baabda, Lebanon.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@500&display=swap">
+<style>
+/* CV: single light theme (made to be printed), A4 pages, sidebar + main column. Same identity as ahmadhlahib.github.io. */
+:root {
+  --ink: #121A17; --muted: #55605C; --rule: #D6DBD4; --side: #EEF1EC; --accent: #2343D6; --desk: #DDE1DA;
+  --display: "Bricolage Grotesque", "Segoe UI", system-ui, sans-serif;
+  --body: "IBM Plex Sans", "Segoe UI", system-ui, sans-serif;
+  --mono: "IBM Plex Mono", Consolas, monospace;
+  color-scheme: light;
+}
+* { box-sizing: border-box; }
+html, body { margin: 0; }
+body { background: var(--desk); color: var(--ink); font-family: var(--body); font-size: 9.6pt; line-height: 1.45; padding: 24px 16px; }
+@page { size: A4; margin: 0; }
+@media print { body { background: #fff; padding: 0; } .page { box-shadow: none !important; margin: 0 !important; height: 297mm; min-height: 0; } .screen-only { display: none !important; } }
+
+.page {
+  width: 210mm; min-height: 297mm; margin: 0 auto 24px; background: #fff; box-shadow: 0 10px 30px rgba(0,0,0,.12);
+  display: grid; grid-template-columns: 64mm minmax(0, 1fr); break-after: page; overflow: hidden;
+}
+.page:last-child { break-after: auto; }
+@media screen and (max-width: 860px) {
+  .page { width: 100%; min-height: 0; grid-template-columns: minmax(0, 1fr); }
+}
+
+aside { background: var(--side); padding: 14mm 7mm 12mm 9mm; display: grid; gap: 7mm; align-content: start; }
+main { padding: 14mm 12mm 12mm 10mm; display: grid; gap: 6mm; align-content: start; min-width: 0; }
+
+h1, h2, h3 { margin: 0; font-family: var(--display); line-height: 1.1; }
+p { margin: 0; }
+ul { margin: 0; padding-left: 4.2mm; display: grid; gap: 1.4mm; }
+li::marker { color: var(--accent); }
+a { color: inherit; text-decoration: none; }
+
+.photo { width: 34mm; height: 34mm; border-radius: 50%; object-fit: cover; display: block; border: 1mm solid #fff; box-shadow: 0 2px 8px rgba(0,0,0,.12); }
+.side-h { font-family: var(--mono); font-size: 7.6pt; letter-spacing: .14em; text-transform: uppercase; color: var(--accent); margin-bottom: 2.6mm; }
+.contact { display: grid; gap: 2.2mm; font-size: 8.8pt; }
+.contact div { display: grid; gap: .3mm; }
+.contact b { font-weight: 600; font-size: 7.4pt; color: var(--muted); text-transform: uppercase; letter-spacing: .08em; }
+.contact span { overflow-wrap: anywhere; }
+.skills { display: grid; gap: 3mm; }
+.skills b { display: block; font-size: 8.6pt; font-weight: 600; margin-bottom: .6mm; }
+.skills span { color: var(--muted); font-size: 8.6pt; }
+.plain { list-style: none; padding: 0; gap: 1.6mm; font-size: 8.8pt; }
+.plain li span { color: var(--muted); }
+
+.name { font-size: 27pt; font-weight: 800; letter-spacing: -.01em; }
+.title { margin-top: 2mm; font-family: var(--mono); font-size: 9pt; letter-spacing: .1em; text-transform: uppercase; color: var(--accent); }
+.profile { color: var(--ink); font-size: 9.8pt; line-height: 1.55; }
+.sec { display: grid; gap: 3.4mm; }
+.sec-h { font-size: 12.5pt; font-weight: 800; letter-spacing: .02em; display: flex; align-items: center; gap: 3mm; }
+.sec-h::after { content: ""; flex: 1; height: .35mm; background: var(--rule); }
+.job { display: grid; gap: 1.6mm; break-inside: avoid; }
+.job + .job { padding-top: 3.2mm; border-top: .25mm dashed var(--rule); }
+.job-top { display: flex; justify-content: space-between; align-items: baseline; gap: 4mm; flex-wrap: wrap; }
+.job h3 { font-size: 11pt; font-weight: 600; }
+.job .org { color: var(--muted); font-size: 9pt; }
+.dates { font-family: var(--mono); font-size: 8pt; color: var(--muted); white-space: nowrap; font-variant-numeric: tabular-nums; }
+.highlight { font-size: 9pt; color: var(--muted); }
+.highlight b { color: var(--ink); font-weight: 600; }
+.tags { display: flex; flex-wrap: wrap; gap: 1.4mm; }
+.tag { font-family: var(--mono); font-size: 7.4pt; padding: .5mm 2mm; border-radius: 99px; background: #E7EBFB; color: var(--accent); }
+
+.screen-only { text-align: center; margin: 0 auto 16px; font-size: 13px; color: var(--muted); }
+.screen-only a { color: var(--accent); font-weight: 600; text-decoration: underline; text-underline-offset: 3px; }
+</style>
+</head>
+<body>
+<p class="screen-only"><a href="cv.pdf">Download as PDF</a> · <a href="./">Back to website</a></p>
+
+<!-- ============ PAGE 1 ============ -->
+<div class="page">
+  <aside>
+    <img class="photo" src="assets/ahmad-el-lahib-portrait.jpg" alt="Ahmad El Lahib">
+    <div>
+      <div class="side-h">Contact</div>
+      <div class="contact">
+        <div><b>Phone / WhatsApp</b><span>+961 71 312 535</span></div>
+        <div><b>Email</b><span><a href="mailto:ahmad.h.lahib@gmail.com">ahmad.h.lahib@gmail.com</a></span></div>
+        <div><b>Location</b><span>Antounieh, Baabda, Lebanon</span></div>
+        <div><b>LinkedIn</b><span><a href="https://www.linkedin.com/in/ahmad-ellahib">linkedin.com/in/ahmad-ellahib</a></span></div>
+        <div><b>Website</b><span><a href="https://ahmadhlahib.github.io">ahmadhlahib.github.io</a></span></div>
+        <div><b>GitHub</b><span><a href="https://github.com/ahmadhlahib">github.com/ahmadhlahib</a></span></div>
+      </div>
+    </div>
+    <div>
+      <div class="side-h">Skills</div>
+      <div class="skills">
+        <div><b>Android</b><span>Kotlin, Java, Jetpack Compose, Coroutines &amp; Flow, Hilt / Dagger, Room, SQLite</span></div>
+        <div><b>Architecture</b><span>MVVM, MVP, Clean Architecture, Repository pattern, modular SDK / AAR integration</span></div>
+        <div><b>Payments &amp; POS</b><span>EMV contact / contactless, PIN, reversals, DCC, surcharging, QR payments, settlement, TMS, PCI-DSS practices</span></div>
+        <div><b>Devices &amp; protocols</b><span>Nexgo &amp; Kozen SDKs, ECR (serial, Wi-Fi), MDB vending, RS232, USB, receipt printers</span></div>
+        <div><b>Web</b><span>Websites and web apps: HTML, CSS, JavaScript, PHP, ASP.NET, responsive design, GitHub Pages</span></div>
+        <div><b>Backend &amp; desktop</b><span>C#, .NET, WPF, REST APIs, SQL, MySQL, Oracle</span></div>
+        <div><b>Tools &amp; process</b><span>Git, CI/CD, Firebase, unit testing, Android Studio, Visual Studio, Agile / Scrum</span></div>
+      </div>
+    </div>
+  </aside>
+
+
+  <main>
+    <header>
+      <h1 class="name">Ahmad El Lahib</h1>
+      <div class="title">Senior Android Developer · Payment terminals &amp; POS · Apps &amp; websites</div>
+    </header>
+
+    <p class="profile">Senior Android Developer with 12 years in software development (since 2014), the last nine building Android apps. I specialise in payment terminals: the apps that read cards, talk to the bank, print receipts and connect to cash registers and vending machines. I care about reliable code, real-device testing and clear delivery. Certified Scrum Master and Product Owner, and available for freelance Android, Windows and website projects.</p>
+
+    <section class="sec">
+      <h2 class="sec-h">Experience</h2>
+
+      <article class="job">
+        <div class="job-top">
+          <div><h3>Senior Android Developer</h3><div class="org">areeba (Areeba Technologies) · Beirut, Lebanon</div></div>
+          <span class="dates">Jun 2024 – Present</span>
+        </div>
+        <ul>
+          <li>Lead Android development of the POS app running on Nexgo and Kozen payment terminals (UN20, N62, N92 and more), used by merchants across several markets.</li>
+          <li>Delivered payment features end to end: Dynamic Currency Conversion, surcharging, QR payments, tips and settlement, on top of EMV contact, contactless and magstripe flows with PIN and reversals, following PCI-DSS practices.</li>
+          <li>Turned the terminal into the card reader inside <b>vending machines over MDB</b>: moved to 32-bit pricing so high-value items charge correctly, added automatic refunds when a paid item isn't released or the result is lost, and a self-healing connection to the vending service.</li>
+          <li>Integrated cash registers (ECR) over serial and Wi-Fi, and the Terminal Management System for remote configuration and updates.</li>
+          <li>Refactored to MVVM, the repository pattern and Clean Architecture, <b>reducing crashes by 40%</b>; used Kotlin coroutines to cut transaction latency.</li>
+          <li>Built features with Firebase (Crashlytics, Analytics, Remote Config, push), modular SDK / AAR dependencies with Hilt / Dagger, and unit-tested business logic.</li>
+          <li>Built responsive payment screens for phone-size and 480×480 terminals in English, Arabic and Kurdish.</li>
+          <li>Ship releases with backend, QA and product teams in Agile ceremonies (e.g. versions 2.4.9, 2.5.14, 1.47.1).</li>
+        </ul>
+      </article>
+
+      <article class="job">
+        <div class="job-top">
+          <div><h3>Mid-Level Android Developer</h3><div class="org">BMB Group (Move) · Beirut, Lebanon</div></div>
+          <span class="dates">Oct 2017 – May 2024</span>
+        </div>
+        <ul>
+          <li>Designed and delivered a B2B merchandising app from scratch to deployment, owning the full lifecycle from architecture to customer delivery.</li>
+          <li>Built it with MVVM and design patterns such as Strategy, Chain of Responsibility and Repository, keeping the code clean, scalable and maintainable.</li>
+          <li>Solved complex data synchronisation with an offline-first model on SQLite, with no data loss between online and offline states.</li>
+          <li>Integrated payment, reporting and analytics SDKs, and stable receipt and report printing across printer models.</li>
+          <li>Mentored junior developers and introduced unit testing, CI pipelines and peer reviews.</li>
+        </ul>
+      </article>
+    </section>
+  </main>
+</div>
+
+<!-- ============ PAGE 2 ============ -->
+<div class="page">
+  <aside>
+    <div>
+      <div class="side-h">Education</div>
+      <ul class="plain">
+        <li><b>B.S. in Computer Science</b><br><span>American University of Science &amp; Technology (AUST), Beirut · Dept. of Computer Science &amp; Engineering · 2010 – 2014 (conferred Feb 2015)</span></li>
+        <li><span>Participant, 10th Annual Engineering &amp; Computer Science Project Exhibition, AUST, 2014</span></li>
+      </ul>
+    </div>
+    <div>
+      <div class="side-h">Certifications</div>
+      <ul class="plain">
+        <li>Scrum Master <span>· Scrum Arabia · 2014</span></li>
+        <li>Scrum Product Owner <span>· Scrum Arabia · 2014</span></li>
+        <li>Investigating DNS Abuse / Misuse for Law Enforcement <span>· AUST Cyber Crime Center &amp; ICANN · 2014</span></li>
+        <li>CCNA Discovery: Networking for Home &amp; Small Businesses <span>· Cisco Networking Academy · 2013</span></li>
+        <li>Java Certification</li>
+      </ul>
+    </div>
+    <div>
+      <div class="side-h">Languages</div>
+      <ul class="plain">
+        <li>Arabic <span>· Native</span></li>
+        <li>English <span>· Excellent</span></li>
+        <li>French <span>· Very good</span></li>
+      </ul>
+    </div>    <div>
+      <div class="side-h">Also known</div>
+      <div class="skills">
+        <div><span>C++, XML, Assembly, Eclipse, Adobe Suite</span></div>
+      </div>
+    </div>
+    <div>
+      <div class="side-h">References</div>
+      <p style="font-size:8.8pt;color:var(--muted)">Available on request.</p>
+    </div>
+  </aside>
+
+  <main>
+    <section class="sec">
+      <h2 class="sec-h">Experience (continued)</h2>
+
+      <article class="job">
+        <div class="job-top">
+          <div><h3>Junior Software Developer</h3><div class="org">Code Fish · Beirut, Lebanon</div></div>
+          <span class="dates">Dec 2014 – Sep 2017</span>
+        </div>
+        <ul>
+          <li>Managed HRMS projects for clients including GlobeMed, Jubaili Co. and iEngineering.</li>
+          <li>Delivered backend systems in C# and .NET.</li>
+        </ul>
+      </article>
+
+      <article class="job">
+        <div class="job-top">
+          <div><h3>Software Developer (Internship)</h3><div class="org">Code Fish · Beirut, Lebanon</div></div>
+          <span class="dates">Jul 2014 – Dec 2014</span>
+        </div>
+      </article>
+
+      <article class="job">
+        <div class="job-top">
+          <div><h3>Customer Support Agent</h3><div class="org">Terra Net · Beirut, Lebanon</div></div>
+          <span class="dates">Dec 2013 – Mar 2014</span>
+        </div>
+      </article>
+    </section>
+
+    <section class="sec">
+      <h2 class="sec-h">Projects</h2>
+      <article class="job">
+        <div class="job-top">
+          <div><h3>Fly Beirut Taxi</h3><div class="org">Freelance · Android &amp; iOS · Kotlin Multiplatform, Compose, Firebase</div></div>
+          <span class="dates">2026</span>
+        </div>
+        <p class="highlight">Motorbike-taxi and parcel delivery app for a Beirut taxi office, with rider, driver and manager roles in Arabic and English. Server-side fares, smart dispatch with manager assignment and approval, live tracking, cash or card payment, and monthly financial reports.</p>
+      </article>
+      <article class="job">
+        <div class="job-top">
+          <div><h3>Vending MDB Simulator</h3><div class="org">Windows desktop app · C#, WPF, RS232</div></div>
+          <span class="dates">2026</span>
+        </div>
+        <p class="highlight">A Windows app that plays a vending machine on the MDB bus, so a payment terminal can be tested without the real machine. Covers every outcome: successful vend, sold-out slot, fridge door open, motor jam, power cut, cancel, decline and timeout, with a live log that translates each byte into plain words.</p>
+        <div class="tags"><span class="tag">C#</span><span class="tag">WPF</span><span class="tag">MDB</span><span class="tag">Serial</span></div>
+      </article>
+      <article class="job">
+        <div class="job-top">
+          <div><h3>Personal website</h3><div class="org">ahmadhlahib.github.io</div></div>
+          <span class="dates">2026</span>
+        </div>
+        <p class="highlight">Designed and built my portfolio and freelance website: responsive, light and dark themes, fast to load, hosted on GitHub Pages.</p>
+        <div class="tags"><span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">JavaScript</span></div>
+      </article>
+    </section>
+
+    <section class="sec">
+      <h2 class="sec-h">Freelance</h2>
+      <p class="highlight">Available for <b>Android apps</b> (Kotlin, Jetpack Compose), <b>Windows desktop apps</b> (C#, WPF), <b>websites and web apps</b> (responsive, fast, easy to update), <b>POS and payment terminal apps</b>, <b>device integrations</b> (MDB, serial, USB, printers) and <b>rescue and maintenance</b> of existing apps. Details and contact at ahmadhlahib.github.io.</p>
+    </section>
+  </main>
+</div>
+</body>
+</html>
