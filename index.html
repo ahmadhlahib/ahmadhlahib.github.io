@@ -3,19 +3,67 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta name="description" content="Ahmad El Lahib, Senior Android Developer in Baabda, Lebanon. I build Android apps, Windows apps and websites, specialising in payment terminals, card payments and device integrations. Available for freelance projects.">
-<meta property="og:title" content="Ahmad El Lahib — Android & Windows developer">
-<meta property="og:description" content="I build the software that takes the payment — and the apps and websites around it. Available for freelance projects.">
+<meta name="description" content="Freelance app and website developer in Lebanon. Ahmad El Lahib builds Android apps, Windows apps, websites and POS payment apps for businesses in Beirut and across Lebanon. 12+ years of experience.">
+<link rel="canonical" href="https://ahmadellahib.dev/">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta name="author" content="Ahmad El Lahib">
+<meta name="geo.region" content="LB-JL">
+<meta name="geo.placename" content="Baabda, Lebanon">
+<meta property="og:title" content="Ahmad El Lahib — Freelance App & Website Developer in Lebanon">
+<meta property="og:description" content="Android apps, Windows apps, websites and payment apps, built and tested by a senior developer based in Baabda, Lebanon. Available for freelance projects.">
 <meta property="og:type" content="website">
+<meta property="og:site_name" content="Ahmad El Lahib">
+<meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://ahmadellahib.dev/assets/ahmad-el-lahib-square.jpg">
+<meta property="og:image:alt" content="Ahmad El Lahib, freelance developer in Lebanon">
 <meta property="og:url" content="https://ahmadellahib.dev/">
 <meta name="twitter:card" content="summary">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Person",
+      "@id": "https://ahmadellahib.dev/#person",
+      "name": "Ahmad El Lahib",
+      "jobTitle": "Freelance App & Website Developer · Senior Android Developer",
+      "url": "https://ahmadellahib.dev/",
+      "image": "https://ahmadellahib.dev/assets/ahmad-el-lahib-square.jpg",
+      "email": "mailto:ahmad.h.lahib@gmail.com",
+      "telephone": "+96171312535",
+      "address": { "@type": "PostalAddress", "addressLocality": "Baabda", "addressRegion": "Mount Lebanon", "addressCountry": "LB" },
+      "worksFor": { "@type": "Organization", "name": "areeba" },
+      "alumniOf": { "@type": "CollegeOrUniversity", "name": "American University of Science and Technology" },
+      "knowsAbout": ["Android development", "Kotlin", "Jetpack Compose", "Kotlin Multiplatform", "Windows desktop apps", "C#", "WPF", "Website development", "POS payment apps", "EMV", "MDB vending integration"],
+      "knowsLanguage": ["ar", "en", "fr"],
+      "sameAs": ["https://www.linkedin.com/in/ahmad-ellahib", "https://github.com/ahmadhlahib"]
+    },
+    {
+      "@type": "ProfessionalService",
+      "@id": "https://ahmadellahib.dev/#service",
+      "name": "Ahmad El Lahib — Freelance App & Website Developer",
+      "description": "Freelance development of Android apps, Windows desktop apps, websites and POS payment apps for businesses in Lebanon.",
+      "url": "https://ahmadellahib.dev/",
+      "image": "https://ahmadellahib.dev/assets/ahmad-el-lahib-square.jpg",
+      "email": "ahmad.h.lahib@gmail.com",
+      "telephone": "+96171312535",
+      "founder": { "@id": "https://ahmadellahib.dev/#person" },
+      "address": { "@type": "PostalAddress", "addressLocality": "Baabda", "addressRegion": "Mount Lebanon", "addressCountry": "LB" },
+      "areaServed": [{ "@type": "Country", "name": "Lebanon" }, { "@type": "City", "name": "Beirut" }],
+      "serviceType": ["Android app development", "Windows desktop app development", "Website development", "Web app development", "POS and payment app development", "Device integration", "App maintenance and bug fixing"],
+      "sameAs": ["https://www.linkedin.com/in/ahmad-ellahib", "https://github.com/ahmadhlahib"]
+    }
+  ]
+}
+</script>
 <meta name="color-scheme" content="light dark">
 <meta name="theme-color" content="#F4F5F1" media="(prefers-color-scheme: light)">
 <meta name="theme-color" content="#0F1513" media="(prefers-color-scheme: dark)">
 <style>html,body{margin:0}img{max-width:100%}[hidden]{display:none!important}:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}</style>
 <script>try{var t=localStorage.getItem('theme');if(t==='dark'||t==='light')document.documentElement.setAttribute('data-theme',t)}catch(e){}</script>
-<title>Ahmad El Lahib · Android &amp; Windows Developer</title>
+<title>Freelance App &amp; Website Developer in Lebanon · Ahmad El Lahib</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500;600&display=swap">
@@ -410,6 +458,22 @@ nav.scrolled { padding-block: 12px; }
 .copy { transition: transform .2s var(--ease); }
 .copy:hover { transform: scale(1.06); }
 
+/* FAQ accordion */
+.faq { display: grid; border-top: 1px solid var(--rule); }
+.faq details { border-bottom: 1px solid var(--rule); }
+.faq summary {
+  list-style: none; cursor: pointer; display: flex; justify-content: space-between; align-items: center; gap: 16px;
+  padding: 20px 4px; font-family: var(--display); font-size: clamp(18px, 2vw, 21px); font-weight: 700; transition: color .2s;
+}
+.faq summary::-webkit-details-marker { display: none; }
+.faq summary::after {
+  content: "+"; flex-shrink: 0; width: 32px; height: 32px; border-radius: 50%; display: grid; place-items: center;
+  font-family: var(--mono); font-size: 18px; font-weight: 500; color: var(--accent); background: var(--accent-soft); transition: transform .35s var(--ease);
+}
+.faq summary:hover { color: var(--accent); }
+.faq details[open] summary::after { transform: rotate(45deg); }
+.faq details p { color: var(--muted); max-width: 70ch; padding: 0 4px 22px; animation: rise .5s var(--ease) both; }
+
 /* floating WhatsApp button */
 .wa {
   position: fixed; right: 20px; bottom: calc(20px + env(safe-area-inset-bottom, 0px)); z-index: 70; width: 56px; height: 56px; border-radius: 50%;
@@ -472,7 +536,7 @@ nav.scrolled { padding-block: 12px; }
     <div class="hero-copy">
       <span class="eyebrow">Senior Android Developer at areeba · Payment terminals, EMV &amp; POS apps · Freelance Android, Windows &amp; web apps</span>
       <h1 aria-label="I build the software that takes the payment — and the apps and websites around it.">I build the software that <em>takes the payment</em> — and the <span class="rot" data-words="apps and websites|Android apps|Windows apps|websites|games">apps and websites</span> around it.</h1>
-      <p class="lede">I'm a senior Android developer who works on payment terminals every day: card readers, cash-register links and vending machines. I bring the same care to the mobile apps, Windows apps and websites I build for clients — reliable, tested on real hardware, and pleasant to use.</p>
+      <p class="lede">I'm a freelance app and website developer in Lebanon, and a senior Android developer who works on payment terminals every day: card readers, cash-register links and vending machines. I bring the same care to the mobile apps, Windows apps and websites I build for clients — reliable, tested on real hardware, and pleasant to use.</p>
       <div class="cta-row">
         <a class="btn btn-primary" href="#contact">Start a project</a>
         <a class="btn btn-ghost" href="#work">See my work</a>
@@ -527,7 +591,7 @@ nav.scrolled { padding-block: 12px; }
   <section id="services" aria-labelledby="svc-h">
     <div class="sec-head">
       <div><span class="eyebrow">Services</span><h2 id="svc-h" style="margin-top:12px">What I can build for you</h2></div>
-      <p>From a single screen to a full product. Every project gets the same process: a written scope, regular builds you can try, and a clean handover.</p>
+      <p>From a single screen to a full product, for businesses in Beirut and across Lebanon. Every project gets the same process: a written scope, regular builds you can try, and a clean handover.</p>
     </div>
     <div class="services">
       <article class="svc">
@@ -744,6 +808,35 @@ nav.scrolled { padding-block: 12px; }
     </div>
   </section>
 
+  <section id="faq" aria-labelledby="faq-h">
+    <div class="sec-head">
+      <div><span class="eyebrow">FAQ</span><h2 id="faq-h" style="margin-top:12px">Hiring a freelance developer in Lebanon</h2></div>
+      <p>Quick answers to what clients usually ask first.</p>
+    </div>
+    <div class="faq">
+      <details>
+        <summary>Are you available as a freelance developer in Lebanon?</summary>
+        <p>Yes. I'm based in Baabda, next to Beirut, and I take freelance projects from businesses in Beirut and across Lebanon. Most of the work happens remotely, with regular builds you can try on your own phone or computer.</p>
+      </details>
+      <details>
+        <summary>What kind of apps and websites can you build?</summary>
+        <p>Native Android apps in Kotlin and Jetpack Compose, Windows desktop apps in C# and WPF, websites and web apps, and apps for Android payment terminals (POS). I also connect software to machines: vending machines, printers, and serial or USB devices.</p>
+      </details>
+      <details>
+        <summary>How do you price a project?</summary>
+        <p>After a short call I send a written scope with screens and milestones, and a fixed price or a day rate — your choice. You know what you're getting and when before any work starts.</p>
+      </details>
+      <details>
+        <summary>Can you fix or update an app that already exists?</summary>
+        <p>Yes. If an app crashes, has drifted from its backend or needs a new SDK version, I find the cause, fix it, and add tests so it stays fixed.</p>
+      </details>
+      <details>
+        <summary>How fast do you reply?</summary>
+        <p>Within one working day, with questions or a first estimate. The quickest way to reach me is <a href="https://wa.me/96171312535">WhatsApp</a> or <a href="mailto:ahmad.h.lahib@gmail.com">email</a>.</p>
+      </details>
+    </div>
+  </section>
+
   <section id="contact" aria-labelledby="contact-h">
     <div class="contact">
       <div>
@@ -894,7 +987,7 @@ nav.scrolled { padding-block: 12px; }
     document.querySelectorAll('.facts, .steps').forEach(function (el) { dob.observe(el); });
 
     // reveal on scroll, staggered within each group
-    var groups = ['.portrait-wrap', '.about-copy > *', '.sec-head', '.svc', '.case', '.tl-item', '.cred', '.step', '.marquee', '.stack > div', '.contact'];
+    var groups = ['.portrait-wrap', '.about-copy > *', '.sec-head', '.svc', '.case', '.tl-item', '.cred', '.step', '.marquee', '.stack > div', '.faq details', '.contact'];
     var ro = new IntersectionObserver(function (es) {
       es.forEach(function (e) {
         if (!e.isIntersecting) return;
