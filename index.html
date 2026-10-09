@@ -289,7 +289,7 @@ footer { display: flex; justify-content: space-between; gap: 16px; flex-wrap: wr
         <p>That work means EMV card flows, PIN entry, reversals and currency conversion, plus integrations with cash registers over serial and Wi-Fi and with vending machines over MDB. When the hardware isn't on my desk, I build the tools to test without it.</p>
         <p>As a freelancer I take that discipline to mobile and Windows apps for businesses: clear requirements, small working releases, and code that's tested before it ships.</p>
         <div class="facts">
-          <div class="fact"><b><i class="todo">X+</i></b><span>years building Android apps</span></div>
+          <div class="fact"><b><span id="years">12+</span></b><span>years building apps, since 2014</span></div>
           <div class="fact"><b>5+</b><span>terminal models shipped to</span></div>
           <div class="fact"><b>3</b><span>languages in my UIs: EN · AR · KU</span></div>
         </div>
@@ -455,6 +455,8 @@ footer { display: flex; justify-content: space-between; gap: 16px; flex-wrap: wr
     var now = new Date();
     var d = document.getElementById('r-date');
     if (d) d.textContent = now.toLocaleDateString('en-GB', { day: '2-digit', month: 'short', year: 'numeric' }).toUpperCase();
+    var yrs = document.getElementById('years');
+    if (yrs) yrs.textContent = (now.getFullYear() - 2014) + '+';
     var y = document.getElementById('year');
     if (y) y.textContent = String(now.getFullYear());
     document.querySelectorAll('.copy').forEach(function (btn) {
