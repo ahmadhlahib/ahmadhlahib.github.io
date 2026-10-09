@@ -173,6 +173,7 @@ section { padding-block: clamp(56px, 8vw, 96px); border-top: 1px solid var(--rul
 .case-body { display: grid; gap: 14px; min-width: 0; }
 .case-body p { color: var(--muted); }
 .case ul { margin: 0; padding-left: 18px; display: grid; gap: 6px; }
+.case .shot { width: 100%; height: auto; border-radius: 12px; border: 1px solid var(--rule); }
 .frame {
   font-family: var(--mono); font-size: 13px; background: var(--paper); border: 1px solid var(--rule); border-radius: 10px;
   padding: 12px 14px; overflow-x: auto; white-space: pre; color: var(--ink);
@@ -442,11 +443,17 @@ footer { display: flex; justify-content: space-between; gap: 16px; flex-wrap: wr
         <div class="case-meta">
           <span class="eyebrow">Personal · Android game · 2026</span>
           <h3>Beirut Strike</h3>
-          <div class="tags"><span class="tag">Android</span><span class="tag">Game</span><span class="tag">Coming soon</span></div>
+          <div class="tags"><span class="tag">Kotlin</span><span class="tag">OpenGL ES</span><span class="tag">Firebase</span><span class="tag">WebRTC</span><span class="tag">Coming soon</span></div>
         </div>
         <div class="case-body">
-          <p>My own mobile game for Android, launching on Google Play in late October 2026.</p>
-          <p><b>Coming soon on Google Play.</b></p>
+          <img class="shot" src="assets/beirut-strike.jpg" width="1200" height="675" loading="lazy" alt="Beirut Strike gameplay: a soldier on a real Beirut street with palm trees, traffic and a live minimap">
+          <p>My own online team shooter for Android, set in real Beirut neighbourhoods (Downtown, the Souks, Hamra, Ain El Mreisseh and Raouche), which are generated in 3D from OpenStreetMap and elevation data.</p>
+          <ul>
+            <li>A custom 3D engine with OpenGL ES in Kotlin: streets with traffic and people, real landmarks and hills.</li>
+            <li>Live multiplayer matches synced over Firebase, with public or password rooms, custom teams and team voice chat over WebRTC.</li>
+            <li>12 real guns, 20 military ranks, first and third person, a global ranking, and your own face on your soldier using the front camera (ML Kit).</li>
+          </ul>
+          <p><b>Coming soon on Google Play</b> · <a href="https://ahmadhlahib.github.io/BeirutStrike/">See the game page</a></p>
         </div>
       </article>
 
