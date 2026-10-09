@@ -253,7 +253,7 @@ footer { display: flex; justify-content: space-between; gap: 16px; flex-wrap: wr
 :root { --teal: #12B39A; --violet: #7C5CFF; --blob: .2; --ease: cubic-bezier(.2,.8,.2,1); }
 @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) { --teal: #3DDBC0; --violet: #A28BFF; --blob: .26; } }
 :root[data-theme="dark"] { --teal: #3DDBC0; --violet: #A28BFF; --blob: .26; }
-html { scroll-behavior: smooth; }
+html { scroll-behavior: smooth; overflow-x: hidden; }
 body { overflow-x: clip; }
 ::selection { background: var(--accent); color: #fff; }
 header, section { scroll-margin-top: 84px; }
@@ -279,7 +279,7 @@ header, section { scroll-margin-top: 84px; }
 /* sticky glass nav */
 nav { position: sticky; top: 0; z-index: 60; border-bottom: 0; transition: padding .3s var(--ease); }
 nav::before {
-  content: ""; position: absolute; inset: 0 -100vmax; z-index: -1;
+  content: ""; position: absolute; top: 0; bottom: 0; left: calc(50% - 50vw); right: calc(50% - 50vw); z-index: -1;
   background: color-mix(in srgb, var(--paper) 72%, transparent); border-bottom: 1px solid var(--rule);
   -webkit-backdrop-filter: blur(14px) saturate(1.4); backdrop-filter: blur(14px) saturate(1.4);
 }
@@ -414,7 +414,8 @@ nav.scrolled { padding-block: 12px; }
 }
 .wa.show { transform: none; opacity: 1; }
 .wa.show:hover { transform: scale(1.08); }
-.wa::before { content: ""; position: absolute; inset: 0; border-radius: 50%; background: #1FA855; z-index: -1; animation: ping 2.4s cubic-bezier(0,0,.2,1) infinite; }
+.wa::before { content: ""; position: absolute; inset: 0; border-radius: 50%; background: #1FA855; z-index: -1; animation: waping 2.4s cubic-bezier(0,0,.2,1) infinite; }
+@keyframes waping { 75%, 100% { transform: scale(1.5); opacity: 0; } }
 .wa svg { width: 28px; height: 28px; }
 
 @media (max-width: 900px) { .portrait-wrap { max-width: 320px; } }
@@ -432,6 +433,8 @@ nav.scrolled { padding-block: 12px; }
   .links::-webkit-scrollbar { display: none; }
   .theme-btn { order: 2; }
   .bg i { filter: blur(50px); }
+  .rot { white-space: normal; }
+  .wa { right: 16px; bottom: calc(16px + env(safe-area-inset-bottom, 0px)); width: 52px; height: 52px; }
 }
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
