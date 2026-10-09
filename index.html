@@ -7,6 +7,9 @@
 <meta property="og:title" content="Ahmad El Lahib — Android & Windows developer">
 <meta property="og:description" content="I build the software that takes the payment — and the apps around it. Available for freelance projects.">
 <meta property="og:type" content="website">
+<meta property="og:image" content="https://ahmadhlahib.github.io/assets/ahmad-el-lahib-square.jpg">
+<meta property="og:url" content="https://ahmadhlahib.github.io/">
+<meta name="twitter:card" content="summary">
 <meta name="theme-color" content="#121A17">
 <style>html,body{margin:0}img{max-width:100%}[hidden]{display:none!important}:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}</style>
 <title>Ahmad El Lahib · Android &amp; Windows Developer</title>
@@ -133,6 +136,7 @@ section { padding-block: clamp(56px, 8vw, 96px); border-top: 1px solid var(--rul
 .sec-head h2 { font-size: clamp(30px, 4vw, 46px); font-weight: 700; letter-spacing: -0.015em; }
 .sec-head p { color: var(--muted); max-width: 60ch; }
 
+.portrait-img { display: block; width: 100%; max-width: 100%; height: auto; aspect-ratio: 4 / 5; object-fit: cover; border-radius: 18px; box-shadow: 0 18px 40px -22px rgba(0,0,0,.45); }
 /* about */
 .about { display: grid; grid-template-columns: minmax(0, .8fr) minmax(0, 1.6fr); gap: clamp(28px, 5vw, 64px); align-items: start; }
 .portrait {
@@ -218,7 +222,7 @@ footer { display: flex; justify-content: space-between; gap: 16px; flex-wrap: wr
   .svc:nth-last-child(-n+3) { border-bottom: 1px solid var(--rule); }
   .svc:last-child { border-bottom: 0; }
   .steps, .stack { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-  .portrait { max-width: 320px; }
+  .portrait, .portrait-img { max-width: 320px; }
 }
 @media (max-width: 520px) {
   body { font-size: 16px; }
@@ -277,9 +281,7 @@ footer { display: flex; justify-content: space-between; gap: 16px; flex-wrap: wr
 
   <section id="about" aria-labelledby="about-h">
     <div class="about">
-      <div class="portrait" role="img" aria-label="Photo placeholder">
-        <div><strong>AEL</strong>Your photo goes here<br>(portrait, 4:5)</div>
-      </div>
+      <img class="portrait-img" src="assets/ahmad-el-lahib-portrait.jpg" alt="Ahmad El Lahib" width="800" height="1000">
       <div class="about-copy">
         <span class="eyebrow">About me</span>
         <h2 id="about-h" style="font-size:clamp(30px,4vw,46px);font-weight:700">Payments taught me to build things that can't fail quietly.</h2>
