@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta name="description" content="Freelance app and website developer in Lebanon. Ahmad El Lahib builds Android apps, Windows apps and websites for businesses in Beirut and across Lebanon. 12+ years of experience.">
+<meta name="description" content="Freelance app and website developer in Lebanon. Ahmad El Lahib builds Android apps, Windows apps and websites for businesses in Beirut and across Lebanon, with AI-assisted development and AI features. 12+ years of experience.">
 <link rel="canonical" href="https://ahmadellahib.dev/">
 <meta name="google-site-verification" content="Vl1lZMZoTr2Hh0IcN-axQR5MJur9o84Ptrjzy4fgsU0">
 <meta name="robots" content="index, follow, max-image-preview:large">
@@ -37,7 +37,7 @@
       "address": { "@type": "PostalAddress", "addressLocality": "Baabda", "addressRegion": "Mount Lebanon", "addressCountry": "LB" },
       "worksFor": { "@type": "Organization", "name": "areeba" },
       "alumniOf": { "@type": "CollegeOrUniversity", "name": "American University of Science and Technology" },
-      "knowsAbout": ["Android development", "Kotlin", "Jetpack Compose", "Kotlin Multiplatform", "Windows desktop apps", "C#", "WPF", "Website development", "POS payment apps", "EMV", "MDB vending integration"],
+      "knowsAbout": ["Android development", "Kotlin", "Jetpack Compose", "Kotlin Multiplatform", "Windows desktop apps", "C#", "WPF", "Website development", "AI-assisted software development", "Claude Code", "Agentic coding", "On-device machine learning", "ML Kit", "Speech recognition", "Text-to-speech", "OpenGL ES", "POS payment apps", "EMV", "MDB vending integration"],
       "knowsLanguage": ["ar", "en", "fr"],
       "sameAs": ["https://www.linkedin.com/in/ahmad-ellahib", "https://www.facebook.com/ahmad.lahib.545", "https://www.instagram.com/ahmed_el_lahib", "https://github.com/ahmadhlahib"]
     },
@@ -53,7 +53,12 @@
       "founder": { "@id": "https://ahmadellahib.dev/#person" },
       "address": { "@type": "PostalAddress", "addressLocality": "Baabda", "addressRegion": "Mount Lebanon", "addressCountry": "LB" },
       "areaServed": [{ "@type": "Country", "name": "Lebanon" }, { "@type": "City", "name": "Beirut" }],
-      "serviceType": ["Android app development", "Windows desktop app development", "Website development", "Web app development", "Device integration", "App maintenance and bug fixing"],
+      "hasOfferCatalog": { "@type": "OfferCatalog", "name": "Freelance development services", "itemListElement": [
+        { "@type": "Offer", "itemOffered": { "@id": "https://ahmadellahib.dev/android-app-developer-lebanon/#service" } },
+        { "@type": "Offer", "itemOffered": { "@id": "https://ahmadellahib.dev/website-developer-lebanon/#service" } },
+        { "@type": "Offer", "itemOffered": { "@id": "https://ahmadellahib.dev/windows-app-developer-lebanon/#service" } }
+      ] },
+      "serviceType": ["Android app development", "Windows desktop app development", "Website development", "AI features in apps", "Web app development", "Device integration", "App maintenance and bug fixing"],
       "sameAs": ["https://www.linkedin.com/in/ahmad-ellahib", "https://www.facebook.com/ahmad.lahib.545", "https://www.instagram.com/ahmed_el_lahib", "https://github.com/ahmadhlahib"]
     }
   ]
@@ -213,6 +218,11 @@ section { padding-block: clamp(56px, 8vw, 96px); border-top: 1px solid var(--rul
 .svc h3 { font-size: 21px; font-weight: 700; }
 .svc p { color: var(--muted); font-size: 15.5px; }
 .svc .code { font-family: var(--mono); font-size: 12.5px; color: var(--accent); }
+.svc-more { font-weight: 600; font-size: 15px; text-decoration: none; }
+.svc-more:hover { text-decoration: underline; }
+.footer-svc a { color: var(--muted); }
+.svc-off { grid-column: span 2; border-right: 0; }
+.svc:nth-last-child(3) { border-bottom: 1px solid var(--rule); }
 .svc-off { background: color-mix(in srgb, var(--muted) 7%, transparent); }
 .svc-off .code, .svc-off h3 { color: var(--muted); }
 .svc-off .tag { color: var(--muted); background: color-mix(in srgb, var(--muted) 14%, transparent); }
@@ -260,7 +270,7 @@ section { padding-block: clamp(56px, 8vw, 96px); border-top: 1px solid var(--rul
 .step p { color: var(--muted); font-size: 15.5px; }
 
 /* stack */
-.stack { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 24px; }
+.stack { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 24px; }
 .stack h3 { font-family: var(--mono); font-size: 12.5px; letter-spacing: .1em; text-transform: uppercase; color: var(--muted); font-weight: 500; margin-bottom: 10px; }
 .stack ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 6px; font-weight: 500; }
 
@@ -293,6 +303,7 @@ footer { display: flex; justify-content: space-between; gap: 16px; flex-wrap: wr
   .services, .creds { grid-template-columns: minmax(0, 1fr); }
   .tl-item { grid-template-columns: minmax(0, 1fr); }
   .svc { border-right: 0; }
+  .svc-off { grid-column: auto; }
   .svc:nth-last-child(-n+3) { border-bottom: 1px solid var(--rule); }
   .svc:last-child { border-bottom: 0; }
   .steps, .stack, .facts { grid-template-columns: repeat(2, minmax(0, 1fr)); }
@@ -648,9 +659,9 @@ footer { align-items: center; }
   <header class="hero" id="top">
     <div class="hero-copy">
       <span class="hello"><span class="wave" aria-hidden="true">👋</span><span><span id="hello-text">Hi there</span>, I'm Ahmad</span></span>
-      <span class="eyebrow">Senior Android Developer at areeba · Payment terminals, EMV &amp; POS apps · Freelance Android, Windows &amp; web apps</span>
-      <h1 aria-label="By day I build the software that takes the payment. For clients, I build the apps and websites around it.">By day I build the software that <em>takes the payment</em>. For clients, I build the <span class="rot" data-words="apps and websites|Android apps|Windows apps|websites|games">apps and websites</span> around it.</h1>
-      <p class="lede">I'm a freelance app and website developer in Lebanon, and a senior Android developer who works on payment terminals every day: card readers, cash-register links and vending machines. I bring the same care to the mobile apps, Windows apps and websites I build for clients — reliable, tested on real hardware, and pleasant to use. Because I work at areeba, I don't take freelance POS or payment app projects.</p>
+      <span class="eyebrow">Senior Android Developer at areeba · Payment terminals, EMV &amp; POS apps · AI-assisted development · Freelance Android, Windows &amp; web apps</span>
+      <h1 aria-label="By day I build the software that takes the payment. For clients, I build the apps and websites around it.">By day I build the software that <em>takes the payment</em>. For clients, I build the <span class="rot" data-words="apps and websites|Android apps|Windows apps|websites|AI features|games">apps and websites</span> around it.</h1>
+      <p class="lede">I'm a freelance app and website developer in Lebanon, and a senior Android developer who works on payment terminals every day: card readers, cash-register links and vending machines. I bring the same care to the mobile apps, Windows apps and websites I build for clients — reliable, tested on real hardware, and pleasant to use. I build with AI every day, from coding agents to on-device machine learning and speech, so projects move faster without skipping the tests. Because I work at areeba, I don't take freelance POS or payment app projects.</p>
       <div class="cta-row">
         <a class="btn btn-primary" href="#contact">Start a project</a>
         <a class="btn btn-ghost" href="#work">See my work</a>
@@ -697,6 +708,7 @@ footer { align-items: center; }
         <p>As a Senior Android Developer at <strong>areeba</strong>, I develop the Android app that runs on our payment terminals — Nexgo and Kozen devices such as the UN20, N62 and N92. A customer taps a card, and my code reads it, talks to the bank, prints the receipt and tells the cash register or vending machine what happened.</p>
         <p>That work means EMV card flows, PIN entry, reversals and currency conversion, plus integrations with cash registers over serial and Wi-Fi and with vending machines over MDB. When the hardware isn't on my desk, I build the tools to test without it.</p>
         <p>Before areeba I spent almost seven years at BMB Group, building a B2B merchandising app from scratch with offline sync and receipt printing. I started in 2014 at Code Fish, building HR systems in C# and .NET for clients such as GlobeMed.</p>
+        <p>AI is part of how I work every day. I run coding agents such as Claude Code with project rules, custom skills and tool connections, and I check every AI-written change with tests and on the real device. In my apps I use on-device machine learning, speech recognition and text-to-speech where they make the app genuinely better.</p>
         <p>As a freelancer I take that discipline to mobile apps, Windows apps and websites for businesses: clear requirements, small working releases, and code that's tested before it ships. Out of respect for my role at areeba, I don't build POS or payment apps for anyone else.</p>
         <div class="facts">
           <div class="fact"><b><span id="years" data-count="12" data-suffix="+">12+</span></b><span>years building apps, since 2014</span></div>
@@ -719,24 +731,21 @@ footer { align-items: center; }
         <h3>Android apps</h3>
         <p>Native apps in Kotlin and Jetpack Compose: business tools, field apps, customer apps. Built to work offline when they must and to stay fast on modest devices.</p>
         <div class="tags"><span class="tag">Kotlin</span><span class="tag">Compose</span><span class="tag">Firebase</span></div>
+        <a class="svc-more" href="/android-app-developer-lebanon/">Android app development →</a>
       </article>
       <article class="svc">
         <div class="svc-top"><span class="ico" aria-hidden="true">🖥️</span><span class="code">windows/</span></div>
         <h3>Windows desktop apps</h3>
         <p>Desktop tools in C# and WPF: back-office apps, dashboards, and utilities that talk to devices on COM ports or USB.</p>
         <div class="tags"><span class="tag">C#</span><span class="tag">WPF</span><span class="tag">.NET</span></div>
+        <a class="svc-more" href="/windows-app-developer-lebanon/">Windows app development →</a>
       </article>
       <article class="svc">
         <div class="svc-top"><span class="ico" aria-hidden="true">🌐</span><span class="code">web/</span></div>
         <h3>Websites &amp; web apps</h3>
         <p>Company sites, portfolios, landing pages and web dashboards: responsive on every screen, fast to load and easy to keep up to date, like this site.</p>
         <div class="tags"><span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">JavaScript</span><span class="tag">ASP.NET</span></div>
-      </article>
-      <article class="svc svc-off">
-        <div class="svc-top"><span class="ico" aria-hidden="true">🙅</span><span class="code">payments/ — not offered</span></div>
-        <h3>POS &amp; payment apps</h3>
-        <p>I work full-time at areeba, a payments company, so I don't take freelance work on POS, payment terminal, card payment or any app that competes with areeba's products. It's a matter of professional ethics. You can still see this work in my projects below.</p>
-        <div class="tags"><span class="tag">Not available</span></div>
+        <a class="svc-more" href="/website-developer-lebanon/">Website development →</a>
       </article>
       <article class="svc">
         <div class="svc-top"><span class="ico" aria-hidden="true">🔌</span><span class="code">hardware/</span></div>
@@ -750,6 +759,24 @@ footer { align-items: center; }
         <p>An existing app that crashes, drifts from the backend or needs a new SDK version: I find the cause, fix it, and add tests so it stays fixed.</p>
         <div class="tags"><span class="tag">Debugging</span><span class="tag">Unit tests</span></div>
       </article>
+      <article class="svc">
+        <div class="svc-top"><span class="ico" aria-hidden="true">🤖</span><span class="code">ai/</span></div>
+        <h3>AI features in your app</h3>
+        <p>Practical AI where it helps your users: face and text recognition on the phone, voice commands in Arabic and English, spoken audio from text, and smart checks on what users record.</p>
+        <div class="tags"><span class="tag">ML Kit</span><span class="tag">Speech</span><span class="tag">Text-to-speech</span></div>
+      </article>
+      <article class="svc">
+        <div class="svc-top"><span class="ico" aria-hidden="true">⚡</span><span class="code">ai-dev/</span></div>
+        <h3>AI-assisted delivery</h3>
+        <p>I build with coding agents, set up with your project's rules and tests, so you get working builds sooner. A person still owns every line: reviewed, tested and explained.</p>
+        <div class="tags"><span class="tag">Claude Code</span><span class="tag">Agents</span><span class="tag">MCP</span></div>
+      </article>
+      <article class="svc svc-off">
+        <div class="svc-top"><span class="ico" aria-hidden="true">🙅</span><span class="code">payments/ — not offered</span></div>
+        <h3>POS &amp; payment apps</h3>
+        <p>I work full-time at areeba, a payments company, so I don't take freelance work on POS, payment terminal, card payment or any app that competes with areeba's products. It's a matter of professional ethics. You can still see this work in my projects below.</p>
+        <div class="tags"><span class="tag">Not available</span></div>
+      </article>
     </div>
   </section>
 
@@ -759,6 +786,52 @@ footer { align-items: center; }
       <p>Company projects are described without confidential details.</p>
     </div>
     <div class="work">
+      <article class="case">
+        <div class="case-meta">
+          <span class="eyebrow">Personal · Windows &amp; Mac · 2026</span>
+          <h3>ECR Simulator</h3>
+          <div class="tags"><span class="tag">C#</span><span class="tag">WinForms</span><span class="tag">Python</span><span class="tag">Bluetooth</span><span class="tag">AI-assisted</span></div>
+        </div>
+        <div class="case-body">
+          <p>A cash-register simulator that tests a payment terminal without the shop's real till. It speaks four register protocols over a Bluetooth base or a direct cable, and runs on Windows and macOS.</p>
+          <ul>
+            <li>Sale, refund, void, pre-authorisation and settlement, with auto-reconnect and pulled-cable detection.</li>
+            <li>Found that opening a port with the Windows defaults rebooted a Bluetooth base, which the device maker then confirmed.</li>
+            <li>Built with an AI coding agent, with the protocol logic covered by unit tests. <a href="https://github.com/ahmadhlahib/ecr-simulator">Source on GitHub</a>.</li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="case">
+        <div class="case-meta">
+          <span class="eyebrow">Personal · Windows · 2026</span>
+          <h3>Wireless ECR Simulator</h3>
+          <div class="tags"><span class="tag">C#</span><span class="tag">WPF</span><span class="tag">REST</span><span class="tag">WebSocket</span><span class="tag">AI-assisted</span></div>
+        </div>
+        <div class="case-body">
+          <p>A Windows tool that plays both the merchant system and a virtual terminal for a cloud payment integration, so a full flow can be tested end to end from one laptop, including a smart fridge that unlocks its door after payment.</p>
+          <ul>
+            <li>Merchant REST calls and a virtual terminal on the WebSocket, with approve, decline, busy and no-reply behaviours.</li>
+            <li>Several environments built in, with secrets kept out of the public code. <a href="https://github.com/ahmadhlahib/wireless-ecr-simulator">Source on GitHub</a>.</li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="case">
+        <div class="case-meta">
+          <span class="eyebrow">Personal · Android &amp; iOS · In development</span>
+          <h3>Makharij: Quran pronunciation coach</h3>
+          <div class="tags"><span class="tag">Compose Multiplatform</span><span class="tag">3D</span><span class="tag">Audio analysis</span></div>
+        </div>
+        <div class="case-body">
+          <p>An app that shows where each Arabic letter is pronounced, with an animated 3D cut-away head and tongue drawn by a small 3D renderer written in shared Kotlin.</p>
+          <ul>
+            <li>Side-by-side views of a correct and a common wrong pronunciation, so a student sees what the tongue should do.</li>
+            <li>A teacher records a reference, and the app scores the student's voice against it with audio features (MFCC) and time alignment (DTW).</li>
+          </ul>
+        </div>
+      </article>
+
       <article class="case">
         <div class="case-meta">
           <span class="eyebrow">areeba · Android · 2026</span>
@@ -831,7 +904,7 @@ footer { align-items: center; }
         <div class="case-meta">
           <span class="eyebrow">Personal · Android game · 2026</span>
           <h3>Beirut Strike</h3>
-          <div class="tags"><span class="tag">Kotlin</span><span class="tag">OpenGL ES</span><span class="tag">Firebase</span><span class="tag">WebRTC</span><span class="tag">Coming soon</span></div>
+          <div class="tags"><span class="tag">Kotlin</span><span class="tag">OpenGL ES</span><span class="tag">Firebase</span><span class="tag">WebRTC</span><span class="tag">ML Kit</span><span class="tag">Launching soon</span></div>
         </div>
         <div class="case-body">
           <div class="shot-wrap"><img class="shot" src="assets/beirut-strike.jpg" width="1200" height="675" loading="lazy" alt="Beirut Strike gameplay: a soldier on a real Beirut street with palm trees, traffic and a live minimap"></div>
@@ -841,7 +914,7 @@ footer { align-items: center; }
             <li>Live multiplayer matches synced over Firebase, with public or password rooms, custom teams and team voice chat over WebRTC.</li>
             <li>12 real guns, 20 military ranks, first and third person, a global ranking, and your own face on your soldier using the front camera (ML Kit).</li>
           </ul>
-          <p><b>Coming soon on Google Play</b> · <a href="https://ahmadellahib.dev/BeirutStrike/">See the game page</a></p>
+          <p><b>Closed testing is complete. On Google Play in a few days.</b> · <a href="https://ahmadellahib.dev/BeirutStrike/">See the game page</a></p>
         </div>
       </article>
 
@@ -872,7 +945,7 @@ footer { align-items: center; }
       <div class="tl-item">
         <div><h3>Senior Android Developer</h3><div class="tl-org">areeba · Beirut</div></div>
         <span class="tl-when">Jun 2024 – Present</span>
-        <p>Lead Android development of the POS app on Nexgo and Kozen payment terminals: card payments, DCC, surcharging, QR payments, settlement, cash-register and vending-machine integrations. Refactoring that cut crashes by 40%.</p>
+        <p>Lead Android development of the POS app on Nexgo and Kozen payment terminals: card payments, DCC, surcharging, QR payments, settlement, cash-register and vending-machine integrations. On-site integrations over Bluetooth bases, USB and MDB with retail, restaurant and vending clients. Refactoring that cut crashes by 40%. AI-assisted development with Claude Code, from bug hunts in device logs to test tools.</p>
       </div>
       <div class="tl-item">
         <div><h3>Mid-Level Android Developer</h3><div class="tl-org">BMB Group (Move) · Beirut</div></div>
@@ -921,9 +994,10 @@ footer { align-items: center; }
       <span class="chip">C# · .NET</span><span class="chip">WPF</span><span class="chip">ASP.NET</span><span class="chip">HTML · CSS · JS</span><span class="chip">EMV</span><span class="chip">Nexgo · Kozen</span><span class="chip">MDB vending</span><span class="chip">RS232 · USB</span><span class="chip">Git</span><span class="chip">CI/CD</span><span class="chip">Unit tests</span>
     </div></div></div>
     <div class="stack">
-      <div><h3>Mobile</h3><ul><li>Kotlin · Java</li><li>Jetpack Compose</li><li>Coroutines &amp; Flow</li><li>Hilt · Room · SQLite</li><li>MVVM · Clean Architecture</li><li>Firebase</li></ul></div>
-      <div><h3>Web &amp; desktop</h3><ul><li>HTML · CSS · JavaScript</li><li>ASP.NET · PHP</li><li>C# · .NET · WPF</li><li>REST APIs · SQL</li></ul></div>
-      <div><h3>Payments &amp; devices</h3><ul><li>EMV card flows</li><li>Nexgo / Kozen SDKs</li><li>MDB vending</li><li>Serial · USB · ECR</li></ul></div>
+      <div><h3>Mobile</h3><ul><li>Kotlin · Java</li><li>Jetpack Compose</li><li>Kotlin Multiplatform</li><li>OpenGL ES 3D</li><li>Coroutines &amp; Flow</li><li>Hilt · Room · SQLite</li><li>MVVM · Clean Architecture</li><li>Firebase</li></ul></div>
+      <div><h3>Web &amp; desktop</h3><ul><li>HTML · CSS · JavaScript</li><li>ASP.NET · PHP</li><li>C# · .NET · WPF</li><li>Python · PowerShell</li><li>REST · WebSocket · SQL</li></ul></div>
+      <div><h3>Payments &amp; devices</h3><ul><li>EMV card flows</li><li>Nexgo / Kozen SDKs</li><li>MDB vending</li><li>Serial · USB · Bluetooth · ECR</li></ul></div>
+      <div><h3>AI</h3><ul><li>Claude Code · coding agents</li><li>MCP tools · custom skills</li><li>ML Kit (on-device ML)</li><li>Speech recognition · TTS</li><li>Audio analysis (MFCC, DTW)</li></ul></div>
       <div><h3>Workflow</h3><ul><li>Git · Bitbucket · GitHub</li><li>CI/CD · Unit testing</li><li>Agile / Scrum</li><li>Code review &amp; mentoring</li></ul></div>
     </div>
   </section>
@@ -945,6 +1019,10 @@ footer { align-items: center; }
       <details>
         <summary>Do you build POS or payment apps?</summary>
         <p>No. I work full-time as a Senior Android Developer at areeba, a payments company, so I don't take freelance projects for POS, payment terminal, card payment or other payment apps that would compete with areeba. It's a matter of professionalism. I'm happy to help with any other kind of app or website.</p>
+      </details>
+      <details>
+        <summary>Do you use AI to build apps?</summary>
+        <p>Yes. I work with coding agents such as Claude Code every day, which makes delivery faster. I review, test and understand every change before it reaches you, and I can add AI features to your app too: on-device recognition, voice commands, and text-to-speech in Arabic and English.</p>
       </details>
       <details>
         <summary>How do you price a project?</summary>
@@ -979,6 +1057,7 @@ footer { align-items: center; }
   <footer>
     <span>© <span id="year">2026</span> Ahmad El Lahib</span>
     <div class="socials footer-socials" data-socials></div>
+    <span class="footer-svc"><a href="/android-app-developer-lebanon/">Android apps</a> · <a href="/windows-app-developer-lebanon/">Windows apps</a> · <a href="/website-developer-lebanon/">Websites</a></span>
     <span>Android · Windows · Web — built with <span class="cup" aria-hidden="true">☕</span><span class="sr-coffee">coffee</span> in Baabda, Lebanon · <span class="psst">psst… type “vibes”</span></span>
   </footer>
 </div>
