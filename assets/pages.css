@@ -109,42 +109,33 @@ html[lang="ar"] .wa { right: auto; left: 18px; }
 .mark-logo { display: block; height: 44px; width: auto; border-radius: 10px; }
 .brand-banner { display: block; width: 100%; height: auto; border-radius: 18px; margin-top: 28px; box-shadow: 0 18px 40px -22px rgba(0,0,0,.45); }
 
-/* ---- AEL logo glow v2: strong rotating halo, pulsing light, shine sweep ---- */
-@property --glow-angle { syntax: "<angle>"; inherits: false; initial-value: 0deg; }
-.logo-glow { position: relative; display: inline-block; border-radius: 10px; isolation: isolate; line-height: 0;
-  animation: glow-pulse 2.4s ease-in-out infinite alternate; }
-.logo-glow::before {
-  content: ""; position: absolute; inset: -9px; border-radius: 18px; z-index: -1;
-  background: conic-gradient(from var(--glow-angle), #1C8CF0, #4FB3FF, #E8A804, #FFD45C, #1C8CF0);
-  filter: blur(14px); opacity: 1; animation: glow-spin 3.5s linear infinite;
-  transition: inset .35s, filter .35s;
+/* ---- AEL logo glow v3: transparent logo, glow follows the letters ---- */
+.logo-glow { position: relative; display: inline-block; line-height: 0; }
+.logo-glow .mark-logo {
+  display: block; height: 48px; width: auto; border-radius: 0;
+  animation: logo-glow 2.6s ease-in-out infinite alternate; transition: transform .35s;
 }
 .logo-glow::after {
-  content: ""; position: absolute; inset: 0; border-radius: 10px; pointer-events: none; z-index: 1;
-  background: linear-gradient(105deg, transparent 30%, rgba(255,255,255,.85) 47%, rgba(255,220,120,.6) 53%, transparent 70%) no-repeat;
-  background-size: 250% 100%; background-position: 170% 0; mix-blend-mode: screen;
-  animation: glow-sweep 3.2s ease-in-out infinite;
+  content: ""; position: absolute; inset: 0; pointer-events: none;
+  background: linear-gradient(105deg, transparent 30%, rgba(255,255,255,.95) 47%, rgba(255,226,140,.8) 53%, transparent 70%) no-repeat;
+  background-size: 250% 100%; background-position: 170% 0;
+  -webkit-mask: url(/assets/logo-mark-glow.png) center / contain no-repeat;
+          mask: url(/assets/logo-mark-glow.png) center / contain no-repeat;
+  animation: logo-shine 3.4s ease-in-out infinite;
 }
-.logo-glow .mark-logo { position: relative; animation: glow-breathe 2.4s ease-in-out infinite alternate; transition: transform .35s; }
-.mark:hover .logo-glow::before, .mark:focus-visible .logo-glow::before { inset: -14px; filter: blur(18px); }
-.mark:hover .logo-glow .mark-logo { transform: scale(1.06); }
-@keyframes glow-spin { to { --glow-angle: 360deg; } }
-@keyframes glow-sweep { 0%, 45% { background-position: 170% 0; } 80%, 100% { background-position: -70% 0; } }
-@keyframes glow-pulse {
-  from { box-shadow: 0 0 10px 2px rgba(28,140,240,.75), 0 0 26px 6px rgba(28,140,240,.35); }
-  to   { box-shadow: 0 0 14px 3px rgba(232,168,4,.85), 0 0 34px 10px rgba(232,168,4,.4); }
+.mark:hover .logo-glow .mark-logo, .mark:focus-visible .logo-glow .mark-logo { transform: scale(1.07); animation-duration: 1.2s; }
+@keyframes logo-glow {
+  from { filter: drop-shadow(0 0 1px rgba(0,0,0,.35)) drop-shadow(0 0 3px rgba(79,179,255,.95)) drop-shadow(0 0 10px rgba(28,140,240,.85)) drop-shadow(0 0 22px rgba(28,140,240,.55)); }
+  to   { filter: drop-shadow(0 0 1px rgba(0,0,0,.35)) drop-shadow(0 0 3px rgba(255,212,92,.95)) drop-shadow(0 0 12px rgba(232,168,4,.9)) drop-shadow(0 0 26px rgba(232,168,4,.6)) brightness(1.1); }
 }
-@keyframes glow-breathe {
-  from { filter: drop-shadow(0 0 4px rgba(79,179,255,.9)) brightness(1); }
-  to   { filter: drop-shadow(0 0 12px rgba(255,212,92,.95)) brightness(1.15); }
-}
+@keyframes logo-shine { 0%, 45% { background-position: 170% 0; } 80%, 100% { background-position: -70% 0; } }
 .brand-banner { animation: banner-glow 4s ease-in-out infinite alternate; }
 @keyframes banner-glow {
   from { box-shadow: 0 18px 40px -22px rgba(0,0,0,.45), 0 0 0 1px rgba(28,140,240,.45), 0 0 36px -2px rgba(28,140,240,.55); }
   to   { box-shadow: 0 18px 40px -22px rgba(0,0,0,.45), 0 0 0 1px rgba(232,168,4,.5), 0 0 44px -2px rgba(232,168,4,.6); }
 }
 @media (prefers-reduced-motion: reduce) {
-  .logo-glow, .logo-glow::before, .logo-glow::after, .logo-glow .mark-logo, .brand-banner { animation: none !important; }
-  .logo-glow { box-shadow: 0 0 12px 2px rgba(28,140,240,.6); }
+  .logo-glow .mark-logo, .logo-glow::after, .brand-banner { animation: none !important; }
+  .logo-glow .mark-logo { filter: drop-shadow(0 0 1px rgba(0,0,0,.35)) drop-shadow(0 0 8px rgba(28,140,240,.7)); }
   .logo-glow::after { display: none; }
 }
