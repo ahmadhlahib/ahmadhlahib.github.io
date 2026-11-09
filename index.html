@@ -18,12 +18,14 @@
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Ahmad El Lahib">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="https://ahmadellahib.dev/assets/ahmad-el-lahib-square.jpg">
-<meta property="og:image:alt" content="Ahmad El Lahib, freelance developer in Lebanon">
+<meta property="og:image" content="https://ahmadellahib.dev/assets/og-banner.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Ahmad El Lahib, software engineer: Android, iOS and Windows apps, websites, AI solutions and system integrations">
 <meta property="og:url" content="https://ahmadellahib.dev/">
-<meta name="twitter:card" content="summary">
-<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
-<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="/assets/favicon-96.png" type="image/png" sizes="96x96">
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -47,6 +49,7 @@
     {
       "@type": "ProfessionalService",
       "@id": "https://ahmadellahib.dev/#service",
+      "logo": "https://ahmadellahib.dev/assets/icon-512.jpg",
       "name": "Ahmad El Lahib — Freelance App & Website Developer",
       "description": "Freelance development of Android apps, Windows desktop apps and websites for businesses in Lebanon. POS and payment apps are not offered.",
       "url": "https://ahmadellahib.dev/",
@@ -133,6 +136,7 @@ nav {
   padding-block: 22px; border-bottom: 1px solid var(--rule);
 }
 .mark { display: flex; align-items: center; gap: 12px; font-family: var(--display); font-weight: 700; font-size: 19px; color: var(--ink); text-decoration: none; }
+.mark-logo { display: block; height: 44px; width: auto; border-radius: 10px; }
 .mark-badge {
   width: 38px; height: 38px; border-radius: 10px; display: grid; place-items: center;
   background: var(--ink); color: var(--paper); font-family: var(--mono); font-size: 12.5px; font-weight: 600; letter-spacing: -0.02em;
@@ -214,6 +218,7 @@ section { padding-block: clamp(56px, 8vw, 96px); border-top: 1px solid var(--rul
 .fact span { font-size: 14px; color: var(--muted); }
 
 /* services */
+.brand-banner { display: block; width: 100%; height: auto; border-radius: 18px; margin-bottom: clamp(32px, 5vw, 56px); box-shadow: 0 18px 40px -22px rgba(0,0,0,.45); }
 .services { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 0; border: 1px solid var(--rule); border-radius: 18px; overflow: hidden; background: var(--sheet); }
 .svc { padding: 28px; display: grid; gap: 12px; align-content: start; min-width: 0; border-right: 1px solid var(--rule); border-bottom: 1px solid var(--rule); }
 .svc:nth-child(3n) { border-right: 0; }
@@ -646,7 +651,7 @@ footer { align-items: center; }
 
 <div class="wrap">
   <nav aria-label="Main">
-    <a class="mark" href="#top"><span class="mark-badge">AEL</span><span>Ahmad El Lahib</span></a>
+    <a class="mark" href="#top"><img class="mark-logo" src="/assets/logo-mark.png" width="132" height="48" alt=""><span>Ahmad El Lahib</span></a>
     <div class="links">
       <a href="#about">About</a>
       <a href="#services">Services</a>
@@ -726,6 +731,7 @@ footer { align-items: center; }
   </section>
 
   <section id="services" aria-labelledby="svc-h">
+    <img class="brand-banner" src="/assets/banner.jpg" srcset="/assets/banner-720.jpg 720w, /assets/banner.jpg 1200w" sizes="(max-width: 1200px) 100vw, 1160px" width="1200" height="800" loading="lazy" alt="Ahmad El Lahib, software engineer and digital solutions: Android apps, iOS apps, Windows applications, websites and web apps, AI solutions, system integrations and hardware">
     <div class="sec-head">
       <div><span class="eyebrow">Services</span><h2 id="svc-h" style="margin-top:12px">What I can build <span class="scribble">for you</span></h2></div>
       <p>From a single screen to a full product, for businesses in Beirut and across Lebanon. Every project gets the same process: a written scope, regular builds you can try, and a clean handover.</p>
