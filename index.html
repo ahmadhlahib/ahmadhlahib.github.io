@@ -380,7 +380,7 @@ nav.scrolled { padding-block: 12px; }
   -webkit-background-clip: text; background-clip: text; color: transparent; animation: sheen 7s linear infinite;
 }
 @keyframes sheen { to { background-position: 200% 0; } }
-.rot { white-space: nowrap; background: linear-gradient(transparent 64%, var(--accent-soft) 64%); }
+.rot { display: inline-block; max-width: 100%; vertical-align: top; text-align: start; white-space: nowrap; text-decoration: underline; text-decoration-color: var(--accent-soft); text-decoration-thickness: .32em; text-underline-offset: -.18em; text-decoration-skip-ink: none; }
 .rot::after { content: ""; display: inline-block; width: 3px; height: .85em; margin-left: 3px; vertical-align: -.06em; background: var(--accent); animation: caret 1s steps(1) infinite; }
 @keyframes caret { 50% { opacity: 0; } }
 .dot { position: relative; box-shadow: none; }
@@ -655,6 +655,7 @@ footer { align-items: center; }
       <a href="#process">How I work</a>
       <a href="#contact">Contact</a>
       <a href="cv.pdf">CV</a>
+      <a href="/blog/">Blog</a>
       <a href="/ar/" lang="ar" hreflang="ar">العربية</a>
     </div>
     <button class="theme-btn" id="theme-btn" type="button" aria-label="Switch theme"></button>
@@ -705,7 +706,7 @@ footer { align-items: center; }
 
   <section id="about" aria-labelledby="about-h">
     <div class="about">
-      <div class="portrait-wrap"><img class="portrait-img" src="assets/ahmad-el-lahib-portrait.jpg" alt="Ahmad El Lahib" width="800" height="1000"></div>
+      <div class="portrait-wrap"><img class="portrait-img" src="assets/ahmad-el-lahib-portrait.jpg" alt="Ahmad El Lahib" width="640" height="800"></div>
       <div class="about-copy">
         <span class="eyebrow">About me</span>
         <h2 id="about-h" style="font-size:clamp(30px,4vw,46px);font-weight:700">Payments taught me to build things that <span class="scribble">can't fail quietly</span>.</h2>
@@ -911,7 +912,7 @@ footer { align-items: center; }
           <div class="tags"><span class="tag">Kotlin</span><span class="tag">OpenGL ES</span><span class="tag">Firebase</span><span class="tag">WebRTC</span><span class="tag">ML Kit</span><span class="tag">Launching soon</span></div>
         </div>
         <div class="case-body">
-          <div class="shot-wrap"><img class="shot" src="assets/beirut-strike.jpg" width="1200" height="675" loading="lazy" alt="Beirut Strike gameplay: a soldier on a real Beirut street with palm trees, traffic and a live minimap"></div>
+          <div class="shot-wrap"><img class="shot" src="assets/beirut-strike.jpg" width="960" height="540" loading="lazy" alt="Beirut Strike gameplay: a soldier on a real Beirut street with palm trees, traffic and a live minimap"></div>
           <p>My own online team shooter for Android, set in real Beirut neighbourhoods (Downtown, the Souks, Hamra, Ain El Mreisseh and Raouche), which are generated in 3D from OpenStreetMap and elevation data.</p>
           <ul>
             <li>A custom 3D engine with OpenGL ES in Kotlin: streets with traffic and people, real landmarks and hills.</li>
@@ -1061,7 +1062,7 @@ footer { align-items: center; }
   <footer>
     <span>© <span id="year">2026</span> Ahmad El Lahib</span>
     <div class="socials footer-socials" data-socials></div>
-    <span class="footer-svc"><a href="/android-app-developer-lebanon/">Android apps</a> · <a href="/windows-app-developer-lebanon/">Windows apps</a> · <a href="/website-developer-lebanon/">Websites</a> · <a href="/ar/" lang="ar">العربية</a></span>
+    <span class="footer-svc"><a href="/android-app-developer-lebanon/">Android apps</a> · <a href="/windows-app-developer-lebanon/">Windows apps</a> · <a href="/website-developer-lebanon/">Websites</a> · <a href="/blog/">Blog</a> · <a href="/ar/" lang="ar">العربية</a></span>
     <span>Android · Windows · Web — built with <span class="cup" aria-hidden="true">☕</span><span class="sr-coffee">coffee</span> in Baabda, Lebanon · <span class="psst">psst… type “vibes”</span></span>
   </footer>
 </div>
@@ -1231,6 +1232,17 @@ footer { align-items: center; }
     var rot = document.querySelector('.rot');
     if (rot) {
       var words = rot.getAttribute('data-words').split('|'), wi = 0, ci = words[0].length, deleting = true;
+      // reserve room for the longest word so the headline never re-wraps while typing (no layout shift)
+      var fit = function () {
+        var cur = rot.textContent, w = 0, h = 0;
+        rot.style.width = ''; rot.style.minHeight = '';
+        words.forEach(function (x) { rot.textContent = x; var r = rot.getBoundingClientRect(); w = Math.max(w, r.width); h = Math.max(h, r.height); });
+        rot.textContent = cur;
+        rot.style.width = Math.ceil(w) + 'px'; rot.style.minHeight = Math.ceil(h) + 'px';
+      };
+      fit();
+      if (document.fonts && document.fonts.ready) document.fonts.ready.then(fit);
+      var rt; window.addEventListener('resize', function () { clearTimeout(rt); rt = setTimeout(fit, 150); });
       (function tick() {
         var w = words[wi];
         if (deleting) {

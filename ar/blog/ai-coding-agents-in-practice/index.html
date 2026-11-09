@@ -1,0 +1,182 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>كيف أستخدم وكلاء البرمجة بالذكاء الاصطناعي لأسلّم أسرع من دون أخطاء · أحمد اللهيب</title>
+<meta name="description" content="طريقة عمل مطوّر أول مع الذكاء الاصطناعي عبر Claude Code: قواعد المشروع، مهارات مخصّصة، الاختبارات كحاجز أمان، وما يعنيه ذلك للعملاء.">
+<link rel="canonical" href="https://ahmadellahib.dev/ar/blog/ai-coding-agents-in-practice/">
+<link rel="alternate" hreflang="ar" href="https://ahmadellahib.dev/ar/blog/ai-coding-agents-in-practice/">
+<link rel="alternate" hreflang="en" href="https://ahmadellahib.dev/blog/ai-coding-agents-in-practice/">
+<link rel="alternate" hreflang="x-default" href="https://ahmadellahib.dev/blog/ai-coding-agents-in-practice/">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta name="author" content="Ahmad El Lahib">
+<meta property="og:title" content="كيف أستخدم وكلاء البرمجة بالذكاء الاصطناعي لأسلّم أسرع من دون أخطاء · أحمد اللهيب">
+<meta property="og:description" content="طريقة عمل مطوّر أول مع الذكاء الاصطناعي عبر Claude Code: قواعد المشروع، مهارات مخصّصة، الاختبارات كحاجز أمان، وما يعنيه ذلك للعملاء.">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Ahmad El Lahib">
+<meta property="og:locale" content="ar_LB">
+<meta property="og:image" content="https://ahmadellahib.dev/assets/ahmad-el-lahib-square.jpg">
+<meta property="og:url" content="https://ahmadellahib.dev/ar/blog/ai-coding-agents-in-practice/">
+<meta name="twitter:card" content="summary">
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" content="#F4F5F1" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0F1513" media="(prefers-color-scheme: dark)">
+<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+<script>try{var t=localStorage.getItem('theme');if(t==='dark'||t==='light')document.documentElement.setAttribute('data-theme',t)}catch(e){}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;600;700&family=IBM+Plex+Mono:wght@400;600&display=swap">
+<link rel="stylesheet" href="/assets/pages.css">
+<style>
+.article { max-width: 70ch; }
+.article h2 { font-size: clamp(24px, 3vw, 30px); margin: 36px 0 12px; }
+.article p, .article li { color: var(--ink); }
+.article p + p { margin-top: 12px; }
+.article ul, .article ol { padding-inline-start: 22px; display: grid; gap: 8px; margin: 12px 0; }
+.meta { font-family: var(--mono); font-size: 13px; color: var(--muted); }
+html[lang="ar"] .meta { font-family: var(--body); }
+.posts { display: grid; gap: 16px; margin-top: 8px; }
+.post { background: var(--sheet); border: 1px solid var(--rule); border-radius: 16px; padding: 22px; display: grid; gap: 8px; text-decoration: none; color: var(--ink); }
+.post:hover { border-color: var(--accent); }
+.post h2 { font-size: 22px; }
+.post p { color: var(--muted); }
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BlogPosting",
+      "@id": "https://ahmadellahib.dev/ar/blog/ai-coding-agents-in-practice/#post",
+      "headline": "كيف أستخدم وكلاء البرمجة بالذكاء الاصطناعي لأسلّم أسرع من دون أخطاء",
+      "description": "طريقة عمل مطوّر أول مع الذكاء الاصطناعي عبر Claude Code: قواعد المشروع، مهارات مخصّصة، الاختبارات كحاجز أمان، وما يعنيه ذلك للعملاء.",
+      "inLanguage": "ar",
+      "datePublished": "2026-11-09",
+      "dateModified": "2026-11-09",
+      "url": "https://ahmadellahib.dev/ar/blog/ai-coding-agents-in-practice/",
+      "mainEntityOfPage": "https://ahmadellahib.dev/ar/blog/ai-coding-agents-in-practice/",
+      "image": "https://ahmadellahib.dev/assets/ahmad-el-lahib-square.jpg",
+      "author": {
+        "@id": "https://ahmadellahib.dev/#person"
+      },
+      "publisher": {
+        "@id": "https://ahmadellahib.dev/#person"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "الرئيسية",
+          "item": "https://ahmadellahib.dev/ar/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "المدونة",
+          "item": "https://ahmadellahib.dev/ar/blog/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "كيف أستخدم وكلاء البرمجة بالذكاء الاصطناعي لأسلّم أسرع من دون أخطاء",
+          "item": "https://ahmadellahib.dev/ar/blog/ai-coding-agents-in-practice/"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "inLanguage": "ar",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "هل الشيفرة التي يكتبها الذكاء الاصطناعي آمنة للاستخدام الفعلي؟",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "فقط مع الفحوص نفسها التي تخضع لها أي شيفرة: مراجعة واختبارات وتجربة على أجهزة حقيقية. الوكيل يسرّع الكتابة ولا يغني عن التحقّق."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "هل تستطيع إضافة ميزات ذكاء اصطناعي إلى تطبيقي؟",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "نعم: التعرّف على الصور على الهاتف بـ ML Kit، أوامر صوتية بالعربية والإنجليزية، تحويل النص إلى كلام، وتحليل الصوت."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body>
+<div class="wrap">
+  <nav aria-label="Main">
+    <a class="mark" href="/ar/"><span class="mark-badge" dir="ltr">AEL</span>أحمد اللهيب</a>
+    <div class="links"><a href="/ar/android-app-developer-lebanon/">تطبيقات أندرويد</a><a href="/ar/website-developer-lebanon/">مواقع إلكترونية</a><a href="/ar/windows-app-developer-lebanon/">تطبيقات ويندوز</a><a href="/ar/blog/" aria-current="page">المدونة</a><a href="/ar/#contact">تواصل</a><a class="lang-switch" href="/blog/ai-coding-agents-in-practice/" lang="en" hreflang="en">English</a></div>
+  </nav>
+  <div class="crumbs"><a href="/ar/">الرئيسية</a> / <a href="/ar/blog/">المدونة</a></div>
+
+  <header class="hero">
+    <span class="meta">نُشر في 9 تشرين الثاني 2026 · 3 دقائق قراءة</span>
+    <h1>كيف أستخدم وكلاء البرمجة بالذكاء الاصطناعي لأسلّم أسرع من دون أخطاء</h1>
+    <p class="lede">غيّر وكلاء البرمجة بالذكاء الاصطناعي طريقة عملي خلال السنة الأخيرة. إذا استُخدموا بلا ضوابط كتبوا شيفرة واثقة لكنها خاطئة، وإذا استُخدموا بالإعداد الصحيح سمحوا لمطوّر واحد بتسليم ما كان يحتاج فريقًا صغيرًا. إليك الإعداد.</p>
+    <span class="meta">بقلم أحمد اللهيب · مطوّر مستقل في بعبدا، لبنان</span>
+  </header>
+
+  <section class="article">
+<h2>1. قواعد يقرؤها الوكيل قبل كل مهمة</h2>
+<p>لكل مشروع أعمل عليه ملف قواعد قصير يقرؤه الوكيل في البداية: البنية، التسمية، ما يُمنع تسجيله، أي اختبارات تُشغَّل، وما يحتاج قرارًا بشريًا. في أجهزة الدفع يشمل ذلك قواعد مثل «لا تسجّل بيانات البطاقة أبدًا» و«لكل عملية مالية مسار إلغاء». فيلتزم الوكيل بالقواعد نفسها التي يلتزم بها أي عضو جديد في الفريق، في كل مرة.</p>
+
+<h2>2. الاختبارات هي حاجز الأمان</h2>
+<p>لا يكتمل أي تعديل من الذكاء الاصطناعي إلا عندما تنجح الاختبارات ويعمل الناتج على الجهاز الحقيقي. في المناطق الحسّاسة (المبالغ، التواريخ، قراءة البيانات، أي ربط مع نظام آخر) يكتب الوكيل أو يحدّث اختبارًا مع التعديل. وفي الشاشات أتحقّق من النتيجة على الهاتف أو الجهاز نفسه. لا شيء يصل إلى العميل لأن «الذكاء الاصطناعي قال إنه يعمل».</p>
+
+<h2>3. مهارات مخصّصة للمهام المتكرّرة</h2>
+<p>المهام التي أكرّرها تصبح مهارات قابلة لإعادة الاستخدام: تشغيل الاختبارات وتلخيصها، إضافة عنصر جديد إلى محتوى تطبيق تعليمي، تحليل سجلّ جهاز. المهارة إجراء مكتوب قصير يتبعه الوكيل، فتكون النتيجة متّسقة ولا أشرح الشيء نفسه مرتين.</p>
+
+<h2>4. أدوات متصلة بالوكيل</h2>
+<p>عبر اتصالات MCP يستطيع الوكيل تشغيل متصفّح لفحص صفحة ويب، وقراءة السجلات، والعمل مع ملفات التصميم. مثلًا، فحص هذا الموقع على عرض الهاتف وبالعربية من اليمين لليسار قبل نشره.</p>
+
+<h2>5. نتائج حقيقية</h2>
+<ul>
+<li><b>محاكيات اختبار في أيام لا أسابيع.</b> بنيت <a href="https://github.com/ahmadhlahib/ecr-simulator">محاكي آلة الكاش</a> (ويندوز وماك) و<a href="https://github.com/ahmadhlahib/wireless-ecr-simulator">محاكي الربط اللاسلكي</a> مع وكيل ذكاء اصطناعي، ومنطق البروتوكول مغطّى بالاختبارات.</li>
+<li><b>تشخيص أسرع في الميدان.</b> تُلخَّص سجلات الأجهزة الطويلة من موقع العميل في تسلسل زمني، فيُكتشف سبب العملية الضائعة أو الاتصال المنقطع في دقائق.</li>
+<li><b>وقت أكثر للأجزاء الصعبة:</b> التحدّث مع المستخدمين، الاختبار على الأجهزة، والقرارات التي لا يجب أن يتخذها نموذج.</li>
+</ul>
+
+<h2>ماذا يعني ذلك إذا عملت معي</h2>
+<ul>
+<li>نسخ تعمل أسرع، بمستوى الجودة نفسه.</li>
+<li>كل سطر يبقى مراجَعًا ومُختبَرًا ومشروحًا من شخص يفهمه.</li>
+<li>شيفرتك وأسرارك تبقى في مشروعك: المفاتيح وكلمات المرور لا تدخل أبدًا في الأوامر أو الشيفرة العامة.</li>
+<li>إن أردت، أجهّز طريقة العمل نفسها لفريقك: ملف القواعد والمهارات وحواجز الاختبار.</li>
+</ul>
+
+    <h2>أسئلة شائعة</h2>
+    <div class="faq"><details><summary>هل الشيفرة التي يكتبها الذكاء الاصطناعي آمنة للاستخدام الفعلي؟</summary><p>فقط مع الفحوص نفسها التي تخضع لها أي شيفرة: مراجعة واختبارات وتجربة على أجهزة حقيقية. الوكيل يسرّع الكتابة ولا يغني عن التحقّق.</p></details><details><summary>هل تستطيع إضافة ميزات ذكاء اصطناعي إلى تطبيقي؟</summary><p>نعم: التعرّف على الصور على الهاتف بـ ML Kit، أوامر صوتية بالعربية والإنجليزية، تحويل النص إلى كلام، وتحليل الصوت.</p></details></div>
+  </section>
+
+  <section class="contact-sec" aria-labelledby="contact-h">
+    <div class="contact">
+      <h2 id="contact-h">تخطّط لتطبيق أو موقع؟</h2>
+      <p>أرسل بضعة أسطر عمّا تحتاجه. أردّ خلال يوم عمل واحد بأسئلة أو بتقدير أولي.</p>
+      <div class="cta-row">
+        <a class="btn btn-primary" href="https://wa.me/96171312535">راسلني على واتساب</a>
+        <a class="btn btn-ghost" href="mailto:ahmad.h.lahib@gmail.com">أرسل بريدًا إلكترونيًا</a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <span>© 2026 <a href="/ar/">أحمد اللهيب</a> · مطوّر مستقل في بعبدا، لبنان</span>
+    <span class="more"><a href="/ar/blog/">المدونة</a> · <span class="ltr">+961 71 312 535</span></span>
+  </footer>
+</div>
+<a class="wa" href="https://wa.me/96171312535" aria-label="WhatsApp"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.4 8.4 0 0 1-12.4 7.4L3 20.5l1.6-5.4A8.5 8.5 0 1 1 21 11.5z"/><path d="M9 9.5c0 3 2.5 5.5 5.5 5.5l1-1.6-2-1-.8.8a4 4 0 0 1-1.9-1.9l.8-.8-1-2L9 9.5z" fill="currentColor" stroke="none"/></svg></a>
+</body>
+</html>
