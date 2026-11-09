@@ -55,6 +55,8 @@ a { color: inherit; text-decoration: none; }
 .plain { list-style: none; padding: 0; gap: 1.6mm; font-size: 8.8pt; }
 .plain li span { color: var(--muted); }
 
+.cv-top { display: flex; align-items: center; justify-content: space-between; gap: 6mm; }
+.cv-logo { height: 12mm; width: auto; border-radius: 2.5mm; flex: none; }
 .name { font-size: 27pt; font-weight: 800; letter-spacing: -.01em; }
 .title { margin-top: 2mm; font-family: var(--mono); font-size: 9pt; letter-spacing: .1em; text-transform: uppercase; color: var(--accent); }
 .profile { color: var(--ink); font-size: 9.8pt; line-height: 1.55; }
@@ -108,7 +110,7 @@ a { color: inherit; text-decoration: none; }
 
   <main>
     <header>
-      <h1 class="name">Ahmad El Lahib</h1>
+      <div class="cv-top"><h1 class="name">Ahmad El Lahib</h1><img class="cv-logo" src="assets/logo-mark.png" width="132" height="48" alt="AEL logo"></div>
       <div class="title">Senior Android Developer at areeba · Payment terminals, EMV &amp; POS apps · AI-assisted development · Freelance Android, Windows &amp; web apps</div>
     </header>
 
