@@ -79,7 +79,7 @@ section > p + p { margin-top: 12px; }
 .faq summary { cursor: pointer; font-weight: 600; }
 .faq details p { margin-top: 10px; color: var(--muted); }
 
-.note { border-left: 3px solid var(--rule); padding-left: 14px; color: var(--muted); font-size: 15px; margin-top: 20px; max-width: 66ch; }
+.note { border-inline-start: 3px solid var(--rule); padding-inline-start: 14px; color: var(--muted); font-size: 15px; margin-top: 20px; max-width: 66ch; }
 
 .contact { background: var(--ink); color: var(--paper); border-radius: 22px; padding: clamp(28px, 5vw, 52px); display: grid; gap: 18px; }
 .contact h2 { font-size: clamp(28px, 3.6vw, 40px); }
@@ -96,3 +96,12 @@ footer .more { display: flex; flex-wrap: wrap; gap: 16px; }
 .wa svg { width: 28px; height: 28px; }
 
 @media (max-width: 640px) { .links { gap: 14px; font-size: 14px; } }
+
+/* Arabic pages: Arabic font, no letter-spacing (it breaks letter joining), mirrored step numbers */
+html[lang="ar"] { --display: "IBM Plex Sans Arabic", "Segoe UI", Tahoma, sans-serif; --body: "IBM Plex Sans Arabic", "Segoe UI", Tahoma, sans-serif; }
+html[lang="ar"] body { line-height: 1.8; }
+html[lang="ar"] h1, html[lang="ar"] h2, html[lang="ar"] h3 { line-height: 1.35; letter-spacing: 0 !important; }
+html[lang="ar"] .eyebrow, html[lang="ar"] .status, html[lang="ar"] .crumbs { font-family: var(--body); letter-spacing: 0; text-transform: none; font-size: 14px; }
+html[lang="ar"] .wa { right: auto; left: 18px; }
+.ltr { direction: ltr; unicode-bidi: isolate; display: inline-block; }
+.lang-switch { font-weight: 600; }
