@@ -1,0 +1,26 @@
+# Ahmad El Lahib – Freelance App & Website Developer (Lebanon)
+
+> Ahmad El Lahib is a senior software developer based in Baabda, Lebanon, with 12+ years of experience (since 2014). He builds native Android apps (Kotlin, Jetpack Compose), Windows desktop apps (C#, .NET, WPF) and fast, mobile-friendly websites for businesses in Beirut and across Lebanon, and uses AI-assisted development and AI features in his work. Languages: Arabic, English, French.
+
+Contact: ahmad@ahmadellahib.dev · WhatsApp +961 71 312 535 · https://ahmadellahib.dev/
+Not offered as a freelance service: POS, payment, card or vending-payment apps.
+
+## Services
+
+- [Freelance Android App Developer in Lebanon](https://ahmadellahib.dev/android-app-developer-lebanon/): native Kotlin and Jetpack Compose apps for businesses in Beirut and across Lebanon.
+- [Freelance Website Developer in Lebanon](https://ahmadellahib.dev/website-developer-lebanon/): fast, mobile-friendly company websites, landing pages and web apps.
+- [Freelance Windows App Developer in Lebanon](https://ahmadellahib.dev/windows-app-developer-lebanon/): C#, .NET and WPF apps for back-office work, dashboards and tools that connect to printers, scanners and serial or USB devices.
+
+## Articles
+
+- [How much does an app cost in Lebanon? 2026 prices in USD](https://ahmadellahib.dev/blog/app-development-cost-lebanon/): typical freelance price ranges, a worked example, freelancer vs agency.
+- [Does my business need an app or a website?](https://ahmadellahib.dev/blog/app-or-website-for-business/): when a website is enough and when an app pays off.
+- [Hiring an app developer in Lebanon: 10 questions to ask before you pay](https://ahmadellahib.dev/blog/hiring-app-developer-lebanon/)
+- [Technology changes every year: how to keep your app up to date and reliable](https://ahmadellahib.dev/blog/keep-your-app-up-to-date/)
+- [How I use AI coding agents to ship faster without breaking things](https://ahmadellahib.dev/blog/ai-coding-agents-in-practice/)
+
+## More
+
+- [Home](https://ahmadellahib.dev/) · [Arabic version](https://ahmadellahib.dev/ar/) · [Blog](https://ahmadellahib.dev/blog/)
+- [CV](https://ahmadellahib.dev/cv.html)
+- [Beirut Strike](https://ahmadellahib.dev/BeirutStrike/): his own online 3D team shooter Android game set in real Beirut streets.
