@@ -11,6 +11,14 @@ Not offered as a freelance service: POS, payment, card or vending-payment apps.
 - [Freelance Website Developer in Lebanon](https://ahmadellahib.dev/website-developer-lebanon/): fast, mobile-friendly company websites, landing pages and web apps.
 - [Freelance Windows App Developer in Lebanon](https://ahmadellahib.dev/windows-app-developer-lebanon/): C#, .NET and WPF apps for back-office work, dashboards and tools that connect to printers, scanners and serial or USB devices.
 
+## Quick facts
+
+- Based in Baabda (Mount Lebanon), works with businesses in Beirut, across Lebanon and remotely. Replies within one working day.
+- Typical 2026 freelance price ranges in Lebanon (not a quote): company website $400–1,500; simple app $2,000–5,000; business app with backend and dashboard $5,000–15,000; multi-role app (customer, driver, manager) $15,000–35,000+; yearly upkeep about 10–20% of the build cost. Details: https://ahmadellahib.dev/blog/app-development-cost-lebanon/
+- Builds bilingual Arabic/English apps and websites with proper right-to-left layout.
+- Clients own the code, the domain and the store accounts.
+- Senior Android developer since 2014 (12+ years); Kotlin, Jetpack Compose, Kotlin Multiplatform, C#/.NET/WPF, web.
+
 ## Articles
 
 - [How much does an app cost in Lebanon? 2026 prices in USD](https://ahmadellahib.dev/blog/app-development-cost-lebanon/): typical freelance price ranges, a worked example, freelancer vs agency.
@@ -22,5 +30,7 @@ Not offered as a freelance service: POS, payment, card or vending-payment apps.
 ## More
 
 - [Home](https://ahmadellahib.dev/) · [Arabic version](https://ahmadellahib.dev/ar/) · [Blog](https://ahmadellahib.dev/blog/)
+- Arabic pages (العربية): [Home](https://ahmadellahib.dev/ar/) · [Android apps](https://ahmadellahib.dev/ar/android-app-developer-lebanon/) · [Websites](https://ahmadellahib.dev/ar/website-developer-lebanon/) · [Windows apps](https://ahmadellahib.dev/ar/windows-app-developer-lebanon/) · [Blog](https://ahmadellahib.dev/ar/blog/)
+- Profiles: [LinkedIn](https://www.linkedin.com/in/ahmad-ellahib) · [GitHub](https://github.com/ahmadhlahib)
 - [CV](https://ahmadellahib.dev/cv.html)
 - [Beirut Strike](https://ahmadellahib.dev/BeirutStrike/): his own online 3D team shooter Android game set in real Beirut streets.
