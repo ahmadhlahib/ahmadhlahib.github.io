@@ -29,6 +29,7 @@ Not offered as a freelance service: POS, payment, card or vending-payment apps.
 - [Does my business need an app or a website?](https://ahmadellahib.dev/blog/app-or-website-for-business/): when a website is enough and when an app pays off.
 - [Hiring an app developer in Lebanon: 10 questions to ask before you pay](https://ahmadellahib.dev/blog/hiring-app-developer-lebanon/)
 - [Technology changes every year: how to keep your app up to date and reliable](https://ahmadellahib.dev/blog/keep-your-app-up-to-date/)
+- [How I built a private family tree website: 8 generations, Arabic first, privacy built in](https://ahmadellahib.dev/blog/family-tree-web-app/)
 - [How I use AI coding agents to ship faster without breaking things](https://ahmadellahib.dev/blog/ai-coding-agents-in-practice/)
 
 ## More

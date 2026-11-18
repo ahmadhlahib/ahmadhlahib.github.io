@@ -1,0 +1,220 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>كيف بنيت موقعًا خاصًا لشجرة العائلة: 8 أجيال، العربية أولًا، والخصوصية من الأساس · أحمد اللهيب</title>
+<meta name="description" content="مشروع حقيقي: تحويل ملف Excel لعائلة من 168 شخصًا إلى موقع خاص لشجرة العائلة بلغتين، مع تسجيل دخول Google وأدوار للأعضاء وصور وأعياد ميلاد وبطاقات تهنئة، بُني بمساعدة وكلاء البرمجة بالذكاء الاصطناعي.">
+<link rel="canonical" href="https://ahmadellahib.dev/ar/blog/family-tree-web-app/">
+<link rel="alternate" hreflang="ar" href="https://ahmadellahib.dev/ar/blog/family-tree-web-app/">
+<link rel="alternate" hreflang="en" href="https://ahmadellahib.dev/blog/family-tree-web-app/">
+<link rel="alternate" hreflang="x-default" href="https://ahmadellahib.dev/blog/family-tree-web-app/">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta name="author" content="Ahmad El Lahib">
+<meta property="og:title" content="كيف بنيت موقعًا خاصًا لشجرة العائلة: 8 أجيال، العربية أولًا، والخصوصية من الأساس · أحمد اللهيب">
+<meta property="og:description" content="مشروع حقيقي: تحويل ملف Excel لعائلة من 168 شخصًا إلى موقع خاص لشجرة العائلة بلغتين، مع تسجيل دخول Google وأدوار للأعضاء وصور وأعياد ميلاد وبطاقات تهنئة، بُني بمساعدة وكلاء البرمجة بالذكاء الاصطناعي.">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Ahmad El Lahib">
+<meta property="og:locale" content="ar_LB">
+<meta property="og:image" content="https://ahmadellahib.dev/assets/og-banner.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:url" content="https://ahmadellahib.dev/ar/blog/family-tree-web-app/">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" content="#F4F5F1" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0F1513" media="(prefers-color-scheme: dark)">
+<link rel="icon" href="/assets/favicon-96.png" type="image/png" sizes="96x96">
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+<script>try{var t=localStorage.getItem('theme');if(t==='dark'||t==='light')document.documentElement.setAttribute('data-theme',t)}catch(e){}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;600;700&family=IBM+Plex+Mono:wght@400;600&display=swap">
+<link rel="stylesheet" href="/assets/pages.css?v=work1">
+<style>
+.article { max-width: 70ch; }
+.article h2 { font-size: clamp(24px, 3vw, 30px); margin: 36px 0 12px; }
+.article p, .article li { color: var(--ink); }
+.article p + p { margin-top: 12px; }
+.article ul, .article ol { padding-inline-start: 22px; display: grid; gap: 8px; margin: 12px 0; }
+.meta { font-family: var(--mono); font-size: 13px; color: var(--muted); }
+html[lang="ar"] .meta { font-family: var(--body); }
+.posts { display: grid; gap: 16px; margin-top: 8px; }
+.post { background: var(--sheet); border: 1px solid var(--rule); border-radius: 16px; padding: 22px; display: grid; gap: 8px; text-decoration: none; color: var(--ink); }
+.post:hover { border-color: var(--accent); }
+.post h2 { font-size: 22px; }
+.post p { color: var(--muted); }
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BlogPosting",
+      "@id": "https://ahmadellahib.dev/ar/blog/family-tree-web-app/#post",
+      "headline": "كيف بنيت موقعًا خاصًا لشجرة العائلة: 8 أجيال، العربية أولًا، والخصوصية من الأساس",
+      "description": "مشروع حقيقي: تحويل ملف Excel لعائلة من 168 شخصًا إلى موقع خاص لشجرة العائلة بلغتين، مع تسجيل دخول Google وأدوار للأعضاء وصور وأعياد ميلاد وبطاقات تهنئة، بُني بمساعدة وكلاء البرمجة بالذكاء الاصطناعي.",
+      "inLanguage": "ar",
+      "datePublished": "2026-11-18",
+      "dateModified": "2026-11-18",
+      "url": "https://ahmadellahib.dev/ar/blog/family-tree-web-app/",
+      "mainEntityOfPage": "https://ahmadellahib.dev/ar/blog/family-tree-web-app/",
+      "image": "https://ahmadellahib.dev/assets/ahmad-el-lahib-square.jpg",
+      "author": {
+        "@id": "https://ahmadellahib.dev/#person"
+      },
+      "publisher": {
+        "@id": "https://ahmadellahib.dev/#person"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "الرئيسية",
+          "item": "https://ahmadellahib.dev/ar/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "المدونة",
+          "item": "https://ahmadellahib.dev/ar/blog/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "كيف بنيت موقعًا خاصًا لشجرة العائلة: 8 أجيال، العربية أولًا، والخصوصية من الأساس",
+          "item": "https://ahmadellahib.dev/ar/blog/family-tree-web-app/"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "inLanguage": "ar",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "هل يستطيع الغرباء رؤية أرقام هواتف عائلتي وصورها؟",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "لا. الزائر يرى الأسماء وشكل الشجرة فقط. أرقام الهواتف وتواريخ الميلاد وصور النساء والبنات لا تُرسل إلا لأفراد العائلة الموثّقين، والخادم هو من يفرض ذلك وليس الصفحة فقط. والموقع مخفي عن Google أيضًا."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "هل يعمل موقع شجرة العائلة بالعربية؟",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "نعم. هذا الموقع بالعربية أولًا، بتصميم من اليمين إلى اليسار، والأسماء محفوظة بالأحرف العربية واللاتينية، ويتحوّل إلى الإنجليزية أو الألمانية بضغطة واحدة."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "هل يمكنك بناء شجرة من ملف Excel لعائلتنا؟",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "نعم. إذا كانت عائلتك تحتفظ بقائمة فيها كل شخص واسم أبيه، أستطيع استيرادها وتدقيق الأخطاء فيها وتسليمكم شجرة خاصة مع مشرفين منكم."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body>
+<div class="wrap">
+  <nav aria-label="Main">
+    <a class="mark" href="/ar/"><span class="logo-glow"><img class="mark-logo" src="/assets/logo-mark-glow.png" width="140" height="48" alt=""></span>أحمد اللهيب</a>
+    <div class="links"><a href="/ar/android-app-developer-lebanon/">تطبيقات أندرويد</a><a href="/ar/website-developer-lebanon/">مواقع إلكترونية</a><a href="/ar/windows-app-developer-lebanon/">تطبيقات ويندوز</a><a href="/ar/blog/" aria-current="page">المدونة</a><a href="/ar/#contact">تواصل</a><a class="lang-switch" href="/blog/family-tree-web-app/" lang="en" hreflang="en">English</a></div>
+  </nav>
+  <div class="crumbs"><a href="/ar/">الرئيسية</a> / <a href="/ar/blog/">المدونة</a></div>
+
+  <header class="hero">
+    <span class="meta">نُشر في 18 تشرين الثاني 2026 · 5 دقائق قراءة</span>
+    <h1>كيف بنيت موقعًا خاصًا لشجرة العائلة: 8 أجيال، العربية أولًا، والخصوصية من الأساس</h1>
+    <p class="lede">كانت شجرة عائلتي محفوظة في ملف Excel: 168 شخصًا على 8 أجيال، والأسماء بالعربية، والفروع موزّعة بين لبنان والخارج. لا أحد يستطيع قراءتها على الهاتف، ولا أحد يريد أن يضع رقم هاتفه أو صوره في ملف يُتناقل من شخص لآخر. فحوّلتها إلى موقع خاص لشجرة العائلة. هنا ما يفعله الموقع، وكيف تعمل الخصوصية، وما الذي تطلّبه بناؤه.</p>
+    <span class="meta">بقلم أحمد اللهيب · مطوّر مستقل في بعبدا، لبنان</span>
+  </header>
+
+  <section class="article">
+<figure style="margin:8px 0 4px"><img src="/assets/family-tree-app.jpg" width="960" height="775" loading="lazy" alt="شجرة عائلة مرسومة على شكل دائرة: الجدّ الأكبر في الوسط وكل فرع من العائلة بلون مختلف" style="width:100%;height:auto;border-radius:14px;border:1px solid var(--rule)"></figure>
+
+<h2>ما الذي احتاجته العائلة</h2>
+<ul>
+<li><b>أن تجد نفسك خلال ثوانٍ.</b> كبار العائلة لا يتصفّحون الأشجار. يريدون كتابة اسم، أو الإجابة عن سؤال «ابن مين إنت؟»، والوصول مباشرة إلى فرعهم.</li>
+<li><b>العربية أولًا.</b> الأسماء كما تكتبها العائلة، وتصميم من اليمين إلى اليسار، والإنجليزية للجيل الشاب في الخارج.</li>
+<li><b>خصوصية يثق بها الناس.</b> أرقام الهواتف وصور النساء والبنات يجب ألّا تكون علنية أبدًا، ولا يعدّل الشجرة إلا أفراد العائلة.</li>
+<li><b>سبب للعودة.</b> الشجرة التي تراها مرة واحدة تُنسى. أعياد الميلاد والصور والذكريات هي ما يُبقي موقع العائلة حيًّا.</li>
+</ul>
+
+<h2>ماذا يفعل الموقع</h2>
+<ul>
+<li><b>ترحيب «جِد نفسك».</b> تختار جهة الأب أو جهة الأم، تجد اسمك، تضغط «هذا أنا» وتطلب الانضمام.</li>
+<li><b>طريقتا عرض.</b> شجرة تقليدية بفروع تُطوى وتُفتح، وعرض دائري تظهر فيه العائلة كلها على شاشة واحدة. ويمكن تصدير الاثنين كملصق للطباعة.</li>
+<li><b>طلبات لا تعديل حرّ.</b> يطلب الأعضاء إضافة ابن أو صورة أو معلومات، ويوافق مشرفو العائلة على كل طلب قبل أن يغيّر الشجرة.</li>
+<li><b>ديوان العائلة.</b> دردشة جماعية، ألبوم صور، «ما صلة القرابة بيننا؟» بين أي شخصين، أعياد الميلاد القادمة مع تهنئة واتساب بضغطة، وذكريات بالصور ورسائل صوتية قصيرة عن الأجداد.</li>
+<li><b>بطاقات تهنئة.</b> بطاقات جاهزة ليوم الجمعة ورمضان والعيد (التواريخ من التقويم الهجري وتُحسب في المتصفح) وعيد الأم وأعياد ميلاد الأعضاء، للمشاركة على واتساب أو فيسبوك.</li>
+<li><b>ثلاث لغات.</b> العربية والإنجليزية والألمانية بزر واحد، مع كلمات قرابة صحيحة في كل لغة.</li>
+</ul>
+
+<h2>كيف تعمل الخصوصية</h2>
+<p>إخفاء زر ليس خصوصية: أي شخص يستطيع فتح أدوات المتصفح وقراءة ما نزّلته الصفحة. لذلك كل القواعد موجودة على الخادم، في قواعد أمان قاعدة البيانات، والصفحة لا تستلم إلا ما يحقّ للشخص أن يراه.</p>
+<ol>
+<li><b>الزائر</b> يرى الأسماء وشكل الشجرة فقط.</li>
+<li><b>القريب الذي سجّل دخوله</b> (بحساب Google، من دون كلمة سر جديدة) يستطيع طلب الانضمام وتحديد من هو في الشجرة.</li>
+<li><b>العضو الموثّق</b>، بعد موافقة مشرف من العائلة، يرى أيضًا أرقام الهواتف وتواريخ الميلاد والألبوم والدردشة وصور النساء والبنات.</li>
+<li><b>المشرفون</b> يوافقون على الأعضاء والتعديلات، والمالك وحده يضيف المشرفين أو يزيلهم.</li>
+</ol>
+<p>والموقع معلَّم أيضًا كي لا تفهرسه محركات البحث، وعدّاد الزيارات الذي أستخدمه لا يسجّل أي بيانات شخصية.</p>
+
+<h2>التقنيات</h2>
+<ul>
+<li><b>صفحة ويب واحدة سريعة</b> تعمل على أي هاتف، من دون تطبيق للتثبيت.</li>
+<li><b>D3.js</b> لرسم الشجرة والعرض الدائري، مع التكبير والبحث وطيّ الفروع.</li>
+<li><b>Firebase</b>: تسجيل الدخول بحساب Google، وقاعدة بيانات Firestore، وقواعد الأمان الموصوفة أعلاه.</li>
+<li><b>Canvas</b> لرسم بطاقات التهنئة والملصق القابل للطباعة داخل المتصفح.</li>
+<li><b>استيراد لمرة واحدة</b> من ملف Excel، مع تدقيق الأسماء المكرّرة والآباء الناقصين واختلاف الكتابة.</li>
+</ul>
+<p>وتكلفة تشغيله شبه معدومة لعائلة بهذا الحجم.</p>
+
+<h2>بُني بمساعدة وكلاء البرمجة بالذكاء الاصطناعي</h2>
+<p>بنيته باستخدام Claude Code، وهو وكيل برمجة بالذكاء الاصطناعي، كتب معظم الشيفرة بينما قرّرت أنا ماذا نبني، ووضعت قواعد الخصوصية، واختبرت كل خطوة على هواتف حقيقية. هكذا يستطيع شخص واحد تسليم موقع فيه دردشة وأدوار وثلاث لغات وبطاقات تهنئة خلال أيام بدل أسابيع. الذكاء الاصطناعي سريع، لكن قرار من يرى ماذا يبقى قرارًا بشريًا. أشرح طريقتي في <a href="/ar/blog/ai-coding-agents-in-practice/">كيف أستخدم وكلاء البرمجة بالذكاء الاصطناعي</a>.</p>
+
+<h2>ما الذي تعلّمته</h2>
+<ul>
+<li><b>ابدأ من طريقة بحث الناس، لا من البيانات.</b> سؤال «ابن مين إنت؟» ينجح مع كبار العائلة أكثر من خانة البحث.</li>
+<li><b>الطلبات أفضل من التعديل المفتوح.</b> العائلات تهتمّ بالدقة، وخطوة الموافقة تمنع الأخطاء والخلافات.</li>
+<li><b>الأسماء العربية تحتاج عناية.</b> الأسماء المركّبة واختلاف الكتابة والنسخ اللاتينية يجب أن تشير كلها إلى الشخص نفسه.</li>
+<li><b>اختبر على هواتف حقيقية.</b> زر الرجوع في الهاتف والشاشات الصغيرة والاتصال البطيء تتصرّف بشكل مختلف عن الحاسوب.</li>
+</ul>
+
+<h2>هل تريد موقعًا مثله لعائلتك؟</h2>
+<p>الفكرة نفسها تنفع أي عائلة أو جمعية قرية أو رابطة خرّيجين تريد شجرة خاصة أو دليل أعضاء بالعربية والإنجليزية. إذا كانت لديكم قائمة أو ملف Excel، فهذا يكفي للبدء. <a href="/ar/website-developer-lebanon/">اطّلع على خدمة تصميم المواقع</a> أو راسلني أدناه.</p>
+
+    <h2>أسئلة شائعة</h2>
+    <div class="faq"><details><summary>هل يستطيع الغرباء رؤية أرقام هواتف عائلتي وصورها؟</summary><p>لا. الزائر يرى الأسماء وشكل الشجرة فقط. أرقام الهواتف وتواريخ الميلاد وصور النساء والبنات لا تُرسل إلا لأفراد العائلة الموثّقين، والخادم هو من يفرض ذلك وليس الصفحة فقط. والموقع مخفي عن Google أيضًا.</p></details><details><summary>هل يعمل موقع شجرة العائلة بالعربية؟</summary><p>نعم. هذا الموقع بالعربية أولًا، بتصميم من اليمين إلى اليسار، والأسماء محفوظة بالأحرف العربية واللاتينية، ويتحوّل إلى الإنجليزية أو الألمانية بضغطة واحدة.</p></details><details><summary>هل يمكنك بناء شجرة من ملف Excel لعائلتنا؟</summary><p>نعم. إذا كانت عائلتك تحتفظ بقائمة فيها كل شخص واسم أبيه، أستطيع استيرادها وتدقيق الأخطاء فيها وتسليمكم شجرة خاصة مع مشرفين منكم.</p></details></div>
+  </section>
+
+  <section class="contact-sec" aria-labelledby="contact-h">
+    <div class="contact">
+      <h2 id="contact-h">تخطّط لتطبيق أو موقع؟</h2>
+      <p>أرسل بضعة أسطر عمّا تحتاجه. أردّ خلال يوم عمل واحد بأسئلة أو بتقدير أولي.</p>
+      <div class="cta-row">
+        <a class="btn btn-primary" href="https://wa.me/96171312535">راسلني على واتساب</a>
+        <a class="btn btn-ghost" href="mailto:ahmad@ahmadellahib.dev">أرسل بريدًا إلكترونيًا</a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <span>© 2026 <a href="/ar/">أحمد اللهيب</a> · مطوّر مستقل في بعبدا، لبنان</span>
+    <span class="more"><a href="/ar/blog/">المدونة</a> · <span class="ltr">+961 71 312 535</span></span>
+  </footer>
+</div>
+<a class="wa" href="https://wa.me/96171312535" aria-label="WhatsApp"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.4 8.4 0 0 1-12.4 7.4L3 20.5l1.6-5.4A8.5 8.5 0 1 1 21 11.5z"/><path d="M9 9.5c0 3 2.5 5.5 5.5 5.5l1-1.6-2-1-.8.8a4 4 0 0 1-1.9-1.9l.8-.8-1-2L9 9.5z" fill="currentColor" stroke="none"/></svg></a>
+<!-- Cloudflare Web Analytics --><script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "b0c5ae7c3c414172b4d238d3b7402cc6"}'></script><!-- End Cloudflare Web Analytics -->
+</body>
+</html>

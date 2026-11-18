@@ -1,0 +1,220 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>How I built a private family tree website: 8 generations, Arabic first, privacy built in · Ahmad El Lahib</title>
+<meta name="description" content="A real project: turning a family Excel sheet of 168 people into a private, bilingual family tree website with Google sign-in, member roles, photos, birthdays and greeting cards, built with AI coding agents.">
+<link rel="canonical" href="https://ahmadellahib.dev/blog/family-tree-web-app/">
+<link rel="alternate" hreflang="en" href="https://ahmadellahib.dev/blog/family-tree-web-app/">
+<link rel="alternate" hreflang="ar" href="https://ahmadellahib.dev/ar/blog/family-tree-web-app/">
+<link rel="alternate" hreflang="x-default" href="https://ahmadellahib.dev/blog/family-tree-web-app/">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta name="author" content="Ahmad El Lahib">
+<meta property="og:title" content="How I built a private family tree website: 8 generations, Arabic first, privacy built in · Ahmad El Lahib">
+<meta property="og:description" content="A real project: turning a family Excel sheet of 168 people into a private, bilingual family tree website with Google sign-in, member roles, photos, birthdays and greeting cards, built with AI coding agents.">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Ahmad El Lahib">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://ahmadellahib.dev/assets/og-banner.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:url" content="https://ahmadellahib.dev/blog/family-tree-web-app/">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" content="#F4F5F1" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0F1513" media="(prefers-color-scheme: dark)">
+<link rel="icon" href="/assets/favicon-96.png" type="image/png" sizes="96x96">
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+<script>try{var t=localStorage.getItem('theme');if(t==='dark'||t==='light')document.documentElement.setAttribute('data-theme',t)}catch(e){}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,700;12..96,800&family=IBM+Plex+Sans:wght@400;600&family=IBM+Plex+Mono:wght@400;600&display=swap">
+<link rel="stylesheet" href="/assets/pages.css?v=work1">
+<style>
+.article { max-width: 70ch; }
+.article h2 { font-size: clamp(24px, 3vw, 30px); margin: 36px 0 12px; }
+.article p, .article li { color: var(--ink); }
+.article p + p { margin-top: 12px; }
+.article ul, .article ol { padding-inline-start: 22px; display: grid; gap: 8px; margin: 12px 0; }
+.meta { font-family: var(--mono); font-size: 13px; color: var(--muted); }
+html[lang="ar"] .meta { font-family: var(--body); }
+.posts { display: grid; gap: 16px; margin-top: 8px; }
+.post { background: var(--sheet); border: 1px solid var(--rule); border-radius: 16px; padding: 22px; display: grid; gap: 8px; text-decoration: none; color: var(--ink); }
+.post:hover { border-color: var(--accent); }
+.post h2 { font-size: 22px; }
+.post p { color: var(--muted); }
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BlogPosting",
+      "@id": "https://ahmadellahib.dev/blog/family-tree-web-app/#post",
+      "headline": "How I built a private family tree website: 8 generations, Arabic first, privacy built in",
+      "description": "A real project: turning a family Excel sheet of 168 people into a private, bilingual family tree website with Google sign-in, member roles, photos, birthdays and greeting cards, built with AI coding agents.",
+      "inLanguage": "en",
+      "datePublished": "2026-11-18",
+      "dateModified": "2026-11-18",
+      "url": "https://ahmadellahib.dev/blog/family-tree-web-app/",
+      "mainEntityOfPage": "https://ahmadellahib.dev/blog/family-tree-web-app/",
+      "image": "https://ahmadellahib.dev/assets/ahmad-el-lahib-square.jpg",
+      "author": {
+        "@id": "https://ahmadellahib.dev/#person"
+      },
+      "publisher": {
+        "@id": "https://ahmadellahib.dev/#person"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://ahmadellahib.dev/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Blog",
+          "item": "https://ahmadellahib.dev/blog/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "How I built a private family tree website: 8 generations, Arabic first, privacy built in",
+          "item": "https://ahmadellahib.dev/blog/family-tree-web-app/"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "inLanguage": "en",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Can strangers see my family's phone numbers and photos?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. Visitors only see names and the shape of the tree. Phone numbers, birthdays and the photos of women and girls are only sent to verified family members, and the server enforces that, not just the page. The site is also hidden from Google."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does a family tree website work in Arabic?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. This one is Arabic first, with a right-to-left layout and names stored in Arabic and Latin letters, and it switches to English or German with one tap."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can you build one from our Excel sheet?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. If your family already keeps a list with each person and their father, I can import it, check it for mistakes and give you a private tree with your own admins."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body>
+<div class="wrap">
+  <nav aria-label="Main">
+    <a class="mark" href="/"><span class="logo-glow"><img class="mark-logo" src="/assets/logo-mark-glow.png" width="140" height="48" alt=""></span>Ahmad El Lahib</a>
+    <div class="links"><a href="/android-app-developer-lebanon/">Android apps</a><a href="/website-developer-lebanon/">Websites</a><a href="/windows-app-developer-lebanon/">Windows apps</a><a href="/blog/" aria-current="page">Blog</a><a href="/#contact">Contact</a><a class="lang-switch" href="/ar/blog/family-tree-web-app/" lang="ar" hreflang="ar">العربية</a></div>
+  </nav>
+  <div class="crumbs"><a href="/">Home</a> / <a href="/blog/">Blog</a></div>
+
+  <header class="hero">
+    <span class="meta">Published 18 November 2026 · 5 min read</span>
+    <h1>How I built a private family tree website: 8 generations, Arabic first, privacy built in</h1>
+    <p class="lede">My family's tree lived in an Excel file: 168 people across 8 generations, names in Arabic, branches spread over Lebanon and abroad. Nobody could read it on a phone, and nobody wanted to share phone numbers or photos in a file that gets forwarded around. So I turned it into a private family tree website. Here is what it does, how the privacy works, and what it took to build.</p>
+    <span class="meta">By Ahmad El Lahib · freelance developer in Baabda, Lebanon</span>
+  </header>
+
+  <section class="article">
+<figure style="margin:8px 0 4px"><img src="/assets/family-tree-app.jpg" width="960" height="775" loading="lazy" alt="A family tree drawn as a circle: the oldest ancestor in the middle and each branch of the family in its own colour" style="width:100%;height:auto;border-radius:14px;border:1px solid var(--rule)"></figure>
+
+<h2>What the family needed</h2>
+<ul>
+<li><b>Find yourself in seconds.</b> Older relatives don't browse trees. They want to type a name, or answer "whose son are you?", and land on their own branch.</li>
+<li><b>Arabic first.</b> Names written the way the family writes them, a right-to-left layout, and English for the younger generation abroad.</li>
+<li><b>Privacy that people trust.</b> Phone numbers and photos of women and girls must never be public, and only family should be able to change the tree.</li>
+<li><b>A reason to come back.</b> A tree you look at once is forgotten. Birthdays, photos and memories keep a family site alive.</li>
+</ul>
+
+<h2>What the website does</h2>
+<ul>
+<li><b>"Find yourself" welcome.</b> Pick your father's side or your mother's side, find your name, tap "That's me" and ask to join.</li>
+<li><b>Two views.</b> A classic tree with branches you can fold and unfold, and a circle view where the whole family fits on one screen. Both can be exported as a poster to print.</li>
+<li><b>Requests, not free editing.</b> Members ask to add a child, a photo or details; family admins approve each request before it changes the tree.</li>
+<li><b>A family corner.</b> Group chat, a photo album, "how are we related?" between any two people, upcoming birthdays with a one-tap WhatsApp wish, and memories with photos and short voice notes about grandparents.</li>
+<li><b>Greeting cards.</b> Ready cards for Fridays, Ramadan and Eid (dates from the Islamic calendar, calculated in the browser), Mother's Day and members' birthdays, to share on WhatsApp or Facebook.</li>
+<li><b>Three languages.</b> Arabic, English and German, switched with one button, with relationship words that make sense in each language.</li>
+</ul>
+
+<h2>How the privacy works</h2>
+<p>Hiding a button is not privacy: anyone can open the browser tools and read what the page downloaded. So every rule lives on the server, in the database's security rules, and the page only receives what the person is allowed to see.</p>
+<ol>
+<li><b>Visitors</b> see names and the shape of the tree, nothing else.</li>
+<li><b>Signed-in relatives</b> (Google sign-in, no new password) can ask to join and say which person they are.</li>
+<li><b>Verified members</b>, approved by a family admin, also get phone numbers, birthdays, the album, the chat and the photos of women and girls.</li>
+<li><b>Admins</b> approve members and changes; only the owner can add or remove admins.</li>
+</ol>
+<p>The site is also marked so search engines don't index it, and the page counter I use records no personal data.</p>
+
+<h2>The technology</h2>
+<ul>
+<li><b>One fast web page</b> that works on any phone, no app to install.</li>
+<li><b>D3.js</b> to draw the tree and the circle view, with zoom, search and folding branches.</li>
+<li><b>Firebase</b>: Google sign-in, a Firestore database and the security rules described above.</li>
+<li><b>Canvas</b> to draw the greeting cards and the printable poster right in the browser.</li>
+<li><b>A one-time import</b> from the Excel sheet, with checks for duplicate names, missing fathers and spelling differences.</li>
+</ul>
+<p>It costs almost nothing to run for a family of this size.</p>
+
+<h2>Built with AI coding agents</h2>
+<p>I built it with Claude Code, an AI coding agent, which wrote most of the code while I decided what to build, set the privacy rules and tested every step on real phones. That is how one person can ship a site with chat, roles, three languages and greeting cards in days instead of weeks. The AI is fast; the judgement about who sees what stays human. I describe my setup in <a href="/blog/ai-coding-agents-in-practice/">How I use AI coding agents</a>.</p>
+
+<h2>What I learned</h2>
+<ul>
+<li><b>Start from how people search, not from the data.</b> "Whose son are you?" works better than a search box for older relatives.</li>
+<li><b>Requests beat open editing.</b> Families care about accuracy; an approval step stops mistakes and arguments.</li>
+<li><b>Arabic names need care.</b> Compound names, different spellings and Latin versions all have to match the same person.</li>
+<li><b>Test on real phones.</b> The phone Back button, small screens and slow connections behave differently from a laptop.</li>
+</ul>
+
+<h2>Want one for your family?</h2>
+<p>The same approach works for any family, village association or alumni group that wants a private tree or member directory in Arabic and English. If you already have a list or an Excel sheet, that is enough to start. <a href="/website-developer-lebanon/">See my website development service</a> or message me below.</p>
+
+    <h2>FAQ</h2>
+    <div class="faq"><details><summary>Can strangers see my family's phone numbers and photos?</summary><p>No. Visitors only see names and the shape of the tree. Phone numbers, birthdays and the photos of women and girls are only sent to verified family members, and the server enforces that, not just the page. The site is also hidden from Google.</p></details><details><summary>Does a family tree website work in Arabic?</summary><p>Yes. This one is Arabic first, with a right-to-left layout and names stored in Arabic and Latin letters, and it switches to English or German with one tap.</p></details><details><summary>Can you build one from our Excel sheet?</summary><p>Yes. If your family already keeps a list with each person and their father, I can import it, check it for mistakes and give you a private tree with your own admins.</p></details></div>
+  </section>
+
+  <section class="contact-sec" aria-labelledby="contact-h">
+    <div class="contact">
+      <h2 id="contact-h">Planning an app or a website?</h2>
+      <p>Send a few lines about what you need. I reply within one working day with questions or a first estimate.</p>
+      <div class="cta-row">
+        <a class="btn btn-primary" href="https://wa.me/96171312535">Message me on WhatsApp</a>
+        <a class="btn btn-ghost" href="mailto:ahmad@ahmadellahib.dev">Email me</a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <span>© 2026 <a href="/">Ahmad El Lahib</a> · Freelance developer in Baabda, Lebanon</span>
+    <span class="more"><a href="/blog/">Blog</a> · <span class="ltr">+961 71 312 535</span></span>
+  </footer>
+</div>
+<a class="wa" href="https://wa.me/96171312535" aria-label="WhatsApp"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.4 8.4 0 0 1-12.4 7.4L3 20.5l1.6-5.4A8.5 8.5 0 1 1 21 11.5z"/><path d="M9 9.5c0 3 2.5 5.5 5.5 5.5l1-1.6-2-1-.8.8a4 4 0 0 1-1.9-1.9l.8-.8-1-2L9 9.5z" fill="currentColor" stroke="none"/></svg></a>
+<!-- Cloudflare Web Analytics --><script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "b0c5ae7c3c414172b4d238d3b7402cc6"}'></script><!-- End Cloudflare Web Analytics -->
+</body>
+</html>
