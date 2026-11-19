@@ -140,3 +140,8 @@ html[lang="ar"] .wa { right: auto; left: 18px; }
   .logo-glow .mark-logo { filter: drop-shadow(0 0 1px rgba(0,0,0,.35)) drop-shadow(0 0 8px rgba(28,140,240,.7)); }
   .logo-glow::after { display: none; }
 }
+.card .price { font-family: "Bricolage Grotesque", system-ui, sans-serif; font-weight: 800; font-size: 26px; color: var(--accent); line-height: 1.1; }
+.card .meta { color: var(--muted); font-size: 14px; }
+.checks { list-style: none; padding: 0; margin: 18px 0 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr)); gap: 10px 24px; }
+.checks li { position: relative; padding-inline-start: 28px; }
+.checks li::before { content: "✓"; position: absolute; inset-inline-start: 0; top: 0; color: var(--ok); font-weight: 700; }
