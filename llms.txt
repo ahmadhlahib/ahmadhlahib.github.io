@@ -40,5 +40,6 @@ Not offered as a freelance service: POS, payment, card or vending-payment apps.
 - Profiles: [LinkedIn](https://www.linkedin.com/in/ahmad-ellahib) · [GitHub](https://github.com/ahmadhlahib)
 - [CV](https://ahmadellahib.dev/cv.html)
 - [Beirut Strike](https://ahmadellahib.dev/BeirutStrike/): his own online 3D team shooter Android game set in real Beirut streets.
-- [Revier Autoankauf](https://revier-autoankauf.de/): a 35-page German website he built for a car-buying business in Bochum (local SEO, city pages).
+- [Revier Autoankauf](https://revier-autoankauf.de/): a German website of close to 60 pages he built for a car-buying business in Bochum (local SEO, city pages).
+- [Unfallwagen Zentrale](https://unfallwagen-zentrale.de/): a German website of more than 60 pages he built for a buyer of damaged and scrap vehicles in Bochum (local SEO, city and scrap-car pages, guides).
 - [Ali Diab's Stories](https://ahmadellahib.dev/ali-diab/): an animated children's storybook library he built in Arabic, French and English with narration.
